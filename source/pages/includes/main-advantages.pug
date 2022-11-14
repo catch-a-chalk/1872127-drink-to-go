@@ -1,0 +1,14 @@
+- const ADVANTAGES = [{ icon: 'speed', h3: 'Скорость', text: 'Готовый напиток всегда под рукой — просто открой банку', width: '50' }, { icon: 'comfort', h3: 'Удобство', text: 'Легко помещается и в карман, и в маленькую сумочку', width: '52' }, { icon: 'cheerfulness', h3: 'Бодрость', text: 'Сбалансированная доза кофеина даст мощный заряд энергии', width: '42' }, { icon: 'eco', h3: 'Экологичность', text: 'Вся упаковка сделанаиз перерабатываемых материалов', width: '46' },]
+
+section.main-advantages
+  .container
+    .main-advantages__wrapper
+      h2.hdr Главные причины выбрать Drink2Go
+      small.sml Преимущества
+      ul.main-advantages__list
+        each advantage in ADVANTAGES
+          li.main-advantages__item
+            svg(width=advantage.width height='56' aria-hidden='true')
+              use(href=`img/sprite_auto.svg#icon-${advantage.icon}`)
+            h3=advantage.h3
+            p=advantage.text

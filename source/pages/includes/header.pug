@@ -1,0 +1,22 @@
+- const MENUS = [{ text: 'Главная' }, { text: 'Каталог' }, { text: 'Доставка' }, { text: 'О нас' },]
+- const USERS = [{ logo: 'login' }, { logo: 'cart' },]
+
+header
+  .container
+    h1.visually-hidden Drink2Go — это интернет-магазин по продаже кофейных напитков. Удобная сортировка по странам произрастания зерна и концентрации молока поможет выбрать идеальный напиток. Количество позиций для заказа не ограничено.
+    a.header__logotype(href="#")
+      svg(width='32' height='36' role="img" aria-labelledby="logo-header-label" aria-description="умные технологии" fill='#7859CF')
+        title#logo-header-label=projectName
+        use(href='img/sprite_auto.svg#logotype-mobile').for-mobile
+        use(href='img/sprite_auto.svg#logotype-tablet').for-tablet
+        use(href='img/sprite_auto.svg#logotype-desktop').for-desktop
+    ul.header__main
+      each menu in MENUS
+        li.header__submenu
+          a(href='#')
+            p=menu.text
+    ul.header__user
+      each user in USERS
+        li.header__subuser
+          svg(width='16' height='16' aria-hidden='true' fill='#333333')
+            use(href=`img/sprite_auto.svg#logo-${user.logo}`)
