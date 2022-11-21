@@ -31,13 +31,15 @@
         <ul class="header__user">
           <li class="header__subuser">
             <svg width="16" height="16" aria-hidden="true" fill="#333333">
-              <use href="img/sprite_auto.svg#logo-login"></use>
+              <use href="img/sprite_auto.svg#icon-login"></use>
             </svg>
+            <p>Войти</p>
           </li>
           <li class="header__subuser">
             <svg width="16" height="16" aria-hidden="true" fill="#333333">
-              <use href="img/sprite_auto.svg#logo-cart"></use>
+              <use href="img/sprite_auto.svg#icon-cart"></use>
             </svg>
+            <p>Войти</p>
           </li>
         </ul>
       </div>
@@ -64,8 +66,8 @@
       </section>
       <section class="main-advantages">
         <div class="container">
+          <h2 class="hdr">Главные причины выбрать Drink2Go</h2><small class="sml">Преимущества</small>
           <div class="main-advantages__wrapper">
-            <h2 class="hdr">Главные причины выбрать Drink2Go</h2><small class="sml">Преимущества</small>
             <ul class="main-advantages__list">
               <li class="main-advantages__item">
                 <svg width="50" height="56" aria-hidden="true">
@@ -96,6 +98,76 @@
                 <p>Вся упаковка сделанаиз перерабатываемых материалов</p>
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+      <section class="main-catalogue">
+        <div class="container">
+          <h2 class="hdr">Каталог кофейных напитков</h2><small class="sml">Каталог</small>
+          <div class="main-filters__wrapper">
+            <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+              <fieldset class="main-filters__slider"><span>Цена</span>
+                <input class="main-filters__s-left" type="text" step="any">
+                <input class="main-filters__s-right" type="text" step="any">
+                <div class="-value"></div>
+              </fieldset>
+              <fieldset class="main-filters__milk">
+                <ul class="main-filters__m-list">
+                  <li class="main-filters__m-item">
+                    <input class="main-filters__m-radio" type="radio" name="milk-nomatter" id="milk-nomatter" value="nomatter">
+                    <label class="main-filters__m-label" for="milk-nomatter"><span class="main-filters__m-option">Неважно</span></label>
+                  </li>
+                  <li class="main-filters__m-item">
+                    <input class="main-filters__m-radio" type="radio" name="milk-animal" id="milk-animal" value="animal">
+                    <label class="main-filters__m-label" for="milk-animal"><span class="main-filters__m-option">Только животное</span></label>
+                  </li>
+                  <li class="main-filters__m-item">
+                    <input class="main-filters__m-radio" type="radio" name="milk-vegetalbe" id="milk-vegetalbe" value="vegetalbe">
+                    <label class="main-filters__m-label" for="milk-vegetalbe"><span class="main-filters__m-option">Только растительное</span></label>
+                  </li>
+                  <li class="main-filters__m-item">
+                    <input class="main-filters__m-radio" type="radio" name="milk-nomilk" id="milk-nomilk" value="nomilk">
+                    <label class="main-filters__m-label" for="milk-nomilk"><span class="main-filters__m-option">Без молока</span></label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="main-filters__country">
+                <ul class="main-filters__c-list">
+                  <li class="main-filters__c-item">
+                    <input class="main-filters__c-checkbox" type="checkbox" name="country-brazil" id="country-brazil" value="brazil">
+                    <label class="main-filters__c-label" for="country-brazil"><span class="main-filters__c-option">Бразилия</span></label>
+                  </li>
+                  <li class="main-filters__c-item">
+                    <input class="main-filters__c-checkbox" type="checkbox" name="country-ethiopia" id="country-ethiopia" value="ethiopia">
+                    <label class="main-filters__c-label" for="country-ethiopia"><span class="main-filters__c-option">Эфиопия</span></label>
+                  </li>
+                  <li class="main-filters__c-item">
+                    <input class="main-filters__c-checkbox" type="checkbox" name="country-columbia" id="country-columbia" value="columbia">
+                    <label class="main-filters__c-label" for="country-columbia"><span class="main-filters__c-option">Колумбия</span></label>
+                  </li>
+                  <li class="main-filters__c-item">
+                    <input class="main-filters__c-checkbox" type="checkbox" name="country-costa-rica" id="country-costa-rica" value="costa-rica">
+                    <label class="main-filters__c-label" for="country-costa-rica"><span class="main-filters__c-option">Коста-Рика</span></label>
+                  </li>
+                  <li class="main-filters__c-item">
+                    <input class="main-filters__c-checkbox" type="checkbox" name="country-peru" id="country-peru" value="peru">
+                    <label class="main-filters__c-label" for="country-peru"><span class="main-filters__c-option">Перу</span></label>
+                  </li>
+                </ul>
+              </fieldset>
+              <button class="btn btn-violet" type="submit">Применить фильтр</button>
+              <button class="btn btn-white" type="reset">Сбросить фильтр</button>
+            </form>
+          </div>
+          <select name="gradation">
+            <option value="default">по умолчанию</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="cheap">сначала дешевые</option>
+            <option value="high-ranked">высокий рейтинг</option>
+          </select>
+          <div class="main-catalogue__list"><a class="main-catalogue__item" href="#">
+              <picture></picture>
+              <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_1@1x.webp, img/coffee_catalogue/coffee_can_1@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_1@1x.png" srcset="img/coffee_catalogue/coffee_can_1@2x.png 2x" alt="Кофейный напиток лот 1" width="130" height="188"></a>
           </div>
         </div>
       </section>

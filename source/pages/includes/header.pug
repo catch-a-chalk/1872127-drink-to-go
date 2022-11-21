@@ -1,5 +1,5 @@
 - const MENUS = [{ text: 'Главная' }, { text: 'Каталог' }, { text: 'Доставка' }, { text: 'О нас' },]
-- const USERS = [{ logo: 'login' }, { logo: 'cart' },]
+- const USERS = [{ icon: 'login', func: 'Войти'}, { icon: 'cart', func: 'Войти' },]
 
 header
   .container
@@ -19,4 +19,5 @@ header
       each user in USERS
         li.header__subuser
           svg(width='16' height='16' aria-hidden='true' fill='#333333')
-            use(href=`img/sprite_auto.svg#logo-${user.logo}`)
+            use(href=`img/sprite_auto.svg#icon-${user.icon}`)
+          p=user.func
