@@ -1,0 +1,37 @@
+/* RADIO BUTTONS */
+
+.main-filters__m-radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.main-filters__m-option {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' fill='white' stroke='%23BDBDBD' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+
+.main-filters__m-radio:checked + .main-filters__m-option {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' fill='white' stroke='%237859CF' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='8' fill='%237859CF'/%3E%3C/svg%3E%0A");
+}
+
+/* Radio Focus & Hover */
+
+.main-filters__m-radio:focus + .main-filters__m-option,
+.main-filters__m-radio:hover + .main-filters__m-option {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' fill='white' stroke='%239070EC' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='8' fill='%237859CF' fill-opacity='0.25'/%3E%3C/svg%3E%0A");
+}
+
+/* Radio Disabled*/
+
+.main-filters__m-radio:disabled + .main-filters__m-option {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' stroke='%23E2E2E2' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+
+.main-filters__m-radio:checked:disabled + .main-filters__m-option {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' stroke='%23E2E2E2' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='8' fill='%23E2E2E2'/%3E%3C/svg%3E%0A");
+}

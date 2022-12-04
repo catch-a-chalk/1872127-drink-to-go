@@ -1,0 +1,44 @@
+- const COMS = [{ social: 'vk', value:'20' },  { social: 'pinterest', value:'22'},  { social: 'ok', value:'20'},]
+- const INNERS = [{ name: 'Каталог'}, { name: 'Доставка'}, { name: 'Способы оплаты'}, { name: 'О нас'},]
+- const OUTERS = [{ name: 'Блог'}, { name: 'Информация для СМИ'}, { name: 'Правовая информация'},]
+- const CONTACTS = [{ href: 'https://yandex.ru/maps/2/saint-petersburg/?from=api-maps&ll=30.316766%2C59.968164&mode=routes&origin=jsapi_2_1_79&rtext=~59.968137%2C30.316272&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQwNzQ2MxJe0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0L3QsNCx0LXRgNC10LbQvdCw0Y8g0YDQtdC60Lgg0JrQsNGA0L%2FQvtCy0LrQuCwgNSIKDbiH8kEVYN9vQg%3D%3D&z=17', text:'Санкт-Петербург, набережная реки Карповки, дом 5'}, { href: '+79999999999', text:'+7 (999) 999-99-99'},]
+
+footer.container
+  .footer
+    ._wrapper
+      ._social
+        ._logotype
+          a(href="#")
+            svg(width='170' height='36' role="img" aria-labelledby="logo-footer-label" aria-description="Drink 2 Go")
+              title#logo-footer-label=projectName
+              use(href='img/sprite_auto.svg#logotype-mobile').for-mobile
+              use(href='img/sprite_auto.svg#logotype-tablet').for-tablet
+              use(href='img/sprite_auto.svg#logotype-desktop').for-desktop
+          p Интернет-магазин кофейных напитков
+        ul._coms
+          each com in COMS
+            li._com
+              a(href="#")
+                svg(width=com.value height=com.value aria-hidden='true' fill='#BDBDBD')
+                  use(href=`img/sprite_auto.svg#logo-${com.social}`)
+      ._blocks
+        .footer__inner
+          h3 Интернет-магазин
+          nav
+            each inner in INNERS
+              a(href="#")=inner.name
+        .footer__media
+          h3 Медиа
+          ul
+            each outer in OUTERS
+              li
+                a(href="#")=outer.name
+        .footer__contacts
+          h3 Контакты
+          each contact in CONTACTS
+            .footer__contact
+              a(href=contact.href)=contact.text
+      ._made-by
+        p 
+          |Разработано в&nbsp;
+          strong HTML Academy
