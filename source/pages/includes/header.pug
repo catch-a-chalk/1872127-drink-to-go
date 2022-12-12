@@ -1,25 +1,26 @@
 - const MENUS = [{ text: 'Главная' }, { text: 'Каталог' }, { text: 'Доставка' }, { text: 'О нас' },]
-- const USERS = [{ icon: 'login', func: 'Войти'}, { icon: 'cart', func: 'Войти' },]
+- const USERS = [{ icon: 'login', func: 'Войти'}, { icon: 'cart', func: 'Корзина' },]
 
 header
   .container
-    h1.visually-hidden Drink2Go — это интернет-магазин по продаже кофейных напитков. Удобная сортировка по странам произрастания зерна и концентрации молока поможет выбрать идеальный напиток. Количество позиций для заказа не ограничено.
-    .header__logotype
-      a(href="#")
-        svg(width='170' height='36' role="img" aria-labelledby="logo-header-label" aria-description="Drink 2 Go")
-          title#logo-header-label=projectName
-          use(href='img/sprite_auto.svg#logotype-mobile').for-mobile
-          use(href='img/sprite_auto.svg#logotype-tablet').for-tablet
-          use(href='img/sprite_auto.svg#logotype-desktop').for-desktop
-      p Интернет-магазин кофейных напитков
-    nav.header__main
-      each menu in MENUS
-        div.header__submenu
-          a(href='#')
-            p=menu.text
-    ul.header__user
-      each user in USERS
-        li.header__subuser
-          svg(width='16' height='16' aria-hidden='true' fill='#333333')
-            use(href=`img/sprite_auto.svg#icon-${user.icon}`)
-          p=user.func
+    .header__wrapper
+      h1.visually-hidden Drink2Go — это интернет-магазин по продаже кофейных напитков. Удобная сортировка по странам произрастания зерна и концентрации молока поможет выбрать идеальный напиток. Количество позиций для заказа не ограничено.
+      .header__logotype
+        a(href="#")
+          svg(width='170' height='36' role="img" aria-labelledby="logo-header-label" aria-description="Drink 2 Go")
+            title#logo-header-label=projectName
+            use(href='img/sprite_auto.svg#logotype-mobile').for-mobile
+            use(href='img/sprite_auto.svg#logotype-tablet').for-tablet
+            use(href='img/sprite_auto.svg#logotype-desktop').for-desktop
+        p Интернет-магазин 
+          br 
+          | кофейных напитков
+      nav.header__main
+        each menu in MENUS
+            a(href='#').header__submenu=menu.text
+      .header__user
+        each user in USERS
+          button.header__subuser
+            svg(width='16' height='16' aria-hidden='true' fill='#333333')
+              use(href=`img/sprite_auto.svg#icon-${user.icon}`)
+            p=user.func

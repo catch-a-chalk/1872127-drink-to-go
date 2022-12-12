@@ -60,6 +60,6 @@
     "node": ">=16.15.1"
   },
   "dependencies": {
-    "swiper": "^8.4.4"
+    "swiper": "^8.4.5"
   }
 }

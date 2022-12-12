@@ -12,61 +12,121 @@
   <body>
     <header>
       <div class="container">
-        <h1 class="visually-hidden">Drink2Go — это интернет-магазин по продаже кофейных напитков. Удобная сортировка по странам произрастания зерна и концентрации молока поможет выбрать идеальный напиток. Количество позиций для заказа не ограничено.</h1>
-        <div class="header__logotype"><a href="#">
-            <svg width="170" height="36" role="img" aria-labelledby="logo-header-label" aria-description="Drink 2 Go">
-              <title id="logo-header-label">Drink2Go</title>
-              <use class="for-mobile" href="img/sprite_auto.svg#logotype-mobile"></use>
-              <use class="for-tablet" href="img/sprite_auto.svg#logotype-tablet"></use>
-              <use class="for-desktop" href="img/sprite_auto.svg#logotype-desktop"></use>
-            </svg></a>
-          <p>Интернет-магазин кофейных напитков</p>
+        <div class="header__wrapper">
+          <h1 class="visually-hidden">Drink2Go — это интернет-магазин по продаже кофейных напитков. Удобная сортировка по странам произрастания зерна и концентрации молока поможет выбрать идеальный напиток. Количество позиций для заказа не ограничено.</h1>
+          <div class="header__logotype"><a href="#">
+              <svg width="170" height="36" role="img" aria-labelledby="logo-header-label" aria-description="Drink 2 Go">
+                <title id="logo-header-label">Drink2Go</title>
+                <use class="for-mobile" href="img/sprite_auto.svg#logotype-mobile"></use>
+                <use class="for-tablet" href="img/sprite_auto.svg#logotype-tablet"></use>
+                <use class="for-desktop" href="img/sprite_auto.svg#logotype-desktop"></use>
+              </svg></a>
+            <p>Интернет-магазин <br>кофейных напитков</p>
+          </div>
+          <nav class="header__main"><a class="header__submenu" href="#">Главная</a><a class="header__submenu" href="#">Каталог</a><a class="header__submenu" href="#">Доставка</a><a class="header__submenu" href="#">О нас</a>
+          </nav>
+          <div class="header__user">
+            <button class="header__subuser">
+              <svg width="16" height="16" aria-hidden="true" fill="#333333">
+                <use href="img/sprite_auto.svg#icon-login"></use>
+              </svg>
+              <p>Войти</p>
+            </button>
+            <button class="header__subuser">
+              <svg width="16" height="16" aria-hidden="true" fill="#333333">
+                <use href="img/sprite_auto.svg#icon-cart"></use>
+              </svg>
+              <p>Корзина</p>
+            </button>
+          </div>
         </div>
-        <nav class="header__main">
-          <div class="header__submenu"><a href="#">
-              <p>Главная</p></a></div>
-          <div class="header__submenu"><a href="#">
-              <p>Каталог</p></a></div>
-          <div class="header__submenu"><a href="#">
-              <p>Доставка</p></a></div>
-          <div class="header__submenu"><a href="#">
-              <p>О нас</p></a></div>
-        </nav>
-        <ul class="header__user">
-          <li class="header__subuser">
-            <svg width="16" height="16" aria-hidden="true" fill="#333333">
-              <use href="img/sprite_auto.svg#icon-login"></use>
-            </svg>
-            <p>Войти</p>
-          </li>
-          <li class="header__subuser">
-            <svg width="16" height="16" aria-hidden="true" fill="#333333">
-              <use href="img/sprite_auto.svg#icon-cart"></use>
-            </svg>
-            <p>Войти</p>
-          </li>
-        </ul>
       </div>
     </header>
     <main>
-      <section class="main-intro swiper">
-        <div class="container swiper-wrapper">
-          <div class="main-intro__wrapper swiper-slide">
-            <h2 class="hdr">Декаф Флэт Уайт</h2><small class="sml">Новинка!</small>
-            <p>
-              Свежесваренный кофе без кофеина из&nbsp;Эфиопии&nbsp;с&nbsp;натуральным фермерским молоком&nbsp;&mdash; то, что нужно
-              &nbsp;для расслабления после тяжёлого рабочего дня
-            </p>
-            <div class="main-intro__ordering">
-              <div class="main-intro__price"><small>295₽</small>
-                <large>225₽</large><a class="btn btn-violet" href="#">Заказать</a>
-              </div>
-            </div>
+      <section class="main-intro">
+        <div class="container main-intro__wrapper">
+          <div class="swiper">
+            <ul class="main-intro__list swiper-wrapper">
+              <li class="main-intro__item swiper-slide" href="#">
+                <!-- 1х: 600px; 2x: 1200px-->
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/introduction_swiper/espresso_mobile@1x.webp, img/introduction_swiper/espresso_mobile@2x.webp 2x">
+                  <source type="image/png" media="(max-width: 767px)" srcset="img/introduction_swiper/espresso_mobile@1x.png, img/introduction_swiper/espresso_mobile@2x.png 2x">
+                  <source type="image/webp" media="(max-width: 1439px)" srcset="img/introduction_swiper/espresso_tablet@1x.webp, img/introduction_swiper/espresso_tablet@2x.webp 2x">
+                  <source type="image/png" media="(max-width: 1439px)" srcset="img/introduction_swiper/espresso_tablet@1x.png, img/introduction_swiper/espresso_tablet@2x.png 2x">
+                  <source type="image/webp" srcset="img/introduction_swiper/espresso_desktop@1x.webp, img/introduction_swiper/espresso_desktop@2x.webp 2x"><img src="img/introduction_swiper/espresso_desktop@1x.png" srcset="img/introduction_swiper/espresso_desktop@2x.png 2x" alt="Кофейный напитокespresso" width="600" height="600">
+                </picture>
+                <div class="main-intro__description">
+                  <h2 class="hdr">Декаф Флэт Уайт</h2><small class="sml">Новинка!</small>
+                  <p>
+                    Свежесваренный кофе без кофеина из&nbsp;Эфиопии&nbsp;с&nbsp;натуральным фермерским молоком&nbsp;&mdash; то, что нужно
+                    &nbsp;для расслабления после тяжёлого рабочего дня
+                  </p>
+                  <div class="main-intro__ordering">
+                    <div class="main-intro__price"><small>295₽</small>
+                      <large>225₽</large><a class="btn btn-violet" href="#">Заказать</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="main-intro__item swiper-slide" href="#">
+                <!-- 1х: 600px; 2x: 1200px-->
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/introduction_swiper/flat_white_mobile@1x.webp, img/introduction_swiper/flat_white_mobile@2x.webp 2x">
+                  <source type="image/png" media="(max-width: 767px)" srcset="img/introduction_swiper/flat_white_mobile@1x.png, img/introduction_swiper/flat_white_mobile@2x.png 2x">
+                  <source type="image/webp" media="(max-width: 1439px)" srcset="img/introduction_swiper/flat_white_tablet@1x.webp, img/introduction_swiper/flat_white_tablet@2x.webp 2x">
+                  <source type="image/png" media="(max-width: 1439px)" srcset="img/introduction_swiper/flat_white_tablet@1x.png, img/introduction_swiper/flat_white_tablet@2x.png 2x">
+                  <source type="image/webp" srcset="img/introduction_swiper/flat_white_desktop@1x.webp, img/introduction_swiper/flat_white_desktop@2x.webp 2x"><img src="img/introduction_swiper/flat_white_desktop@1x.png" srcset="img/introduction_swiper/flat_white_desktop@2x.png 2x" alt="Кофейный напитокflat_white" width="600" height="600">
+                </picture>
+                <div class="main-intro__description">
+                  <h2 class="hdr">Декаф Флэт Уайт</h2><small class="sml">Новинка!</small>
+                  <p>
+                    Свежесваренный кофе без кофеина из&nbsp;Эфиопии&nbsp;с&nbsp;натуральным фермерским молоком&nbsp;&mdash; то, что нужно
+                    &nbsp;для расслабления после тяжёлого рабочего дня
+                  </p>
+                  <div class="main-intro__ordering">
+                    <div class="main-intro__price"><small>295₽</small>
+                      <large>225₽</large><a class="btn btn-violet" href="#">Заказать</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="main-intro__item swiper-slide" href="#">
+                <!-- 1х: 600px; 2x: 1200px-->
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/introduction_swiper/lavender_mobile@1x.webp, img/introduction_swiper/lavender_mobile@2x.webp 2x">
+                  <source type="image/png" media="(max-width: 767px)" srcset="img/introduction_swiper/lavender_mobile@1x.png, img/introduction_swiper/lavender_mobile@2x.png 2x">
+                  <source type="image/webp" media="(max-width: 1439px)" srcset="img/introduction_swiper/lavender_tablet@1x.webp, img/introduction_swiper/lavender_tablet@2x.webp 2x">
+                  <source type="image/png" media="(max-width: 1439px)" srcset="img/introduction_swiper/lavender_tablet@1x.png, img/introduction_swiper/lavender_tablet@2x.png 2x">
+                  <source type="image/webp" srcset="img/introduction_swiper/lavender_desktop@1x.webp, img/introduction_swiper/lavender_desktop@2x.webp 2x"><img src="img/introduction_swiper/lavender_desktop@1x.png" srcset="img/introduction_swiper/lavender_desktop@2x.png 2x" alt="Кофейный напитокlavender" width="600" height="600">
+                </picture>
+                <div class="main-intro__description">
+                  <h2 class="hdr">Декаф Флэт Уайт</h2><small class="sml">Новинка!</small>
+                  <p>
+                    Свежесваренный кофе без кофеина из&nbsp;Эфиопии&nbsp;с&nbsp;натуральным фермерским молоком&nbsp;&mdash; то, что нужно
+                    &nbsp;для расслабления после тяжёлого рабочего дня
+                  </p>
+                  <div class="main-intro__ordering">
+                    <div class="main-intro__price"><small>295₽</small>
+                      <large>225₽</large><a class="btn btn-violet" href="#">Заказать</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="main-intro__pagination"></div>
+            <button class="main-intro__button-prev" type="button">
+              <svg width="11" height="20" aria-hidden="true" fill="none">
+                <use href="img/sprite_auto.svg#icon-arrow-left"></use>
+              </svg>
+            </button>
+            <button class="main-intro__button-next" type="button">
+              <svg width="11" height="20" aria-hidden="true" fill="none">
+                <use href="img/sprite_auto.svg#icon-arrow-left"></use>
+              </svg>
+            </button>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </section>
       <section class="main-advantages">
         <div class="container">
@@ -216,11 +276,9 @@
               <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
               <button class="btn btn-violet" type="button">В корзину</button></a>
           </div>
-          <div class="swiper-button-prev">Назад</div>
           <div class="swiper-pagination">1</div>
           <div class="swiper-pagination">2</div>
           <div class="swiper-pagination">3</div>
-          <div class="swiper-button-next">Вперед</div>
         </div>
       </section>
       <section class="main-location">

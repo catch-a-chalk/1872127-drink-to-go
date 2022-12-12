@@ -2,6 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/swiper";
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
@@ -20,6 +21,9 @@
 
 @import "blocks/btn";
 @import "blocks/modal";
+
+@import "blocks/header";
+@import "blocks/main-intro";
 
 @import "blocks/main-filters";
 
