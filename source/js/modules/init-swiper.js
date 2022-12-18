@@ -11,13 +11,13 @@ export default function mySwiper() {
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 50,
       },
     },
 
     navigation: {
-      nextEl: ".main-intro__button-next",
-      prevEl: ".main-intro__button-prev",
+      nextEl: ".main-intro__button--next",
+      prevEl: ".main-intro__button--prev",
     },
 
     pagination: {

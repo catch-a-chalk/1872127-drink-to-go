@@ -1,5 +1,11 @@
 .main-intro {
   background-color: $color-bridal-health;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.main-intro__container {
+  position: relative;
 }
 
 .main-intro__list {
@@ -8,15 +14,40 @@
 
 .main-intro__item {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto calc(50vw - 50px);
+  gap: 40px;
+  justify-content: center;
 }
 
 .main-intro__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 0.02em;
+    order: 2;
+    margin: 4px 0 8px;
+  }
+
+  small {
+    margin: 8px 0 0;
+    order: 1;
+  }
+
   p {
     font-size: 20px;
     font-weight: 400;
     line-height: 32px;
     letter-spacing: 0em;
+    order: 3;
+  }
+
+  div {
+    order: 4;
   }
 }
 
@@ -34,4 +65,27 @@
     font-weight: 600;
     line-height: 32px;
   }
+}
+
+.main-intro__button {
+  position: absolute;
+  top: 50%;
+  z-index: 99;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 30px;
+}
+
+.main-intro__pagination {
+  text-align: center;
+}
+
+.main-intro__button--prev {
+  left: 0;
+}
+
+.main-intro__button--next {
+  right: 0;
+  rotate: 180deg;
 }
