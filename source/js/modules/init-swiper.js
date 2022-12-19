@@ -22,6 +22,10 @@ export default function mySwiper() {
 
     pagination: {
       el: '.main-intro__pagination',
+      clickable: true,
+      renderBullet: function () {
+      return `<span class="dot swiper-pagination-bullet"></span>`;
+      },
     },
   });
 }

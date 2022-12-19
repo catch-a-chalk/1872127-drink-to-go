@@ -131,10 +131,10 @@ button,
 }
 
 .hdr {
-  font-size: 56px;
+  font-size: 42px;
   font-weight: 700;
-  line-height: 80px;
-  letter-spacing: 0.02em;
+  line-height: 64px;
+  letter-spacing: 0em;
 }
 
 .sml {
@@ -144,4 +144,11 @@ button,
   letter-spacing: 0.04em;
   color: $color-slate-blue;
   text-transform: uppercase;
+}
+
+.dot {
+  background-color: $color-slate-blue;
+  width: 62px;
+  height: 4px;
+  border-radius: 10%;
 }
