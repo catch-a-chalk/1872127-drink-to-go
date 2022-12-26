@@ -3,7 +3,7 @@
 //- повесить на последние инпуты атрибуты disabled через JS 
 - const COUNTRY = [{ value:'brazil', span:'Бразилия' }, { value:'ethiopia', span:'Эфиопия' }, { value:'columbia', span:'Колумбия' }, { value:'costa-rica', span:'Коста-Рика' }, { value:'peru', span:'Перу' }, ]
 
-.main-filters__wrapper
+.main-filters
   //- grid-контейнер, содержащий 4 столбца
   form(action='https://echo.htmlacademy.ru/' method='post' autocomplete='off')
     fieldset.main-filters__slider
@@ -12,18 +12,18 @@
       input.main-filters__s-right(type='text' step='any')
       .-value
     fieldset.main-filters__milk
-      .main-filters__m-list
+      .main-filters__list
         each milk in MILK
-          //- добавить инпутам класс .visually-hidden после верстки радио-кнопок
-          label.main-filters__m-label(for=`milk-${milk.value}`)
-            input.main-filters__m-radio(type='radio' name='milk' id=`milk-${milk.value}` value=milk.value)
-            span.main-filters__m-option=milk.span
+          label.main-filters__label-m(for=`milk-${milk.value}`)
+            input.main-filters__input(type='radio' name='milk' id=`milk-${milk.value}` value=milk.value)
+            span.main-filters__m-option
+            =milk.span
     fieldset.main-filters__country
-      .main-filters__c-list
+      .main-filters__list
         each country in COUNTRY
-          //- добавить инпутам класс .visually-hidden после верстки чекбоксов 
-          label.main-filters__c-label(for=`country-${country.value}`)
-            input.main-filters__c-checkbox(type='checkbox' name='country' id=`country-${country.value}` value=country.value)
-            span.main-filters__c-option=country.span
+          label.main-filters__label-c(for=`country-${country.value}`)
+            input.main-filters__input(type='checkbox' name='country' id=`country-${country.value}` value=country.value)
+            span.main-filters__c-option
+            =country.span
     button.btn.btn-violet(type='submit') Применить фильтр
     button.btn.btn-white(type='reset') Сбросить фильтр

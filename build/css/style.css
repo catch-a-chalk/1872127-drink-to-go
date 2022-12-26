@@ -1954,7 +1954,11 @@ button,
   rotate: 180deg;
 }
 
-.main-advantages div {
+.main-advantages {
+  padding-top: 100px;
+}
+
+.main-advantages .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1991,6 +1995,7 @@ button,
   list-style-type: none;
   padding: 0;
   margin: 0;
+  gap: 30px;
 }
 
 .main-advantages__item h3 {
@@ -2011,9 +2016,88 @@ button,
   margin-top: 10px;
 }
 
-/* RADIO BUTTONS */
+.main-catalogue__wrapper {
+  /* SELECT BLOCK */
+}
 
-.main-filters__m-radio {
+.main-catalogue__wrapper .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.main-catalogue__wrapper h2 {
+  grid-column: 1/-1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.main-catalogue__wrapper small {
+  grid-column: 1/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.main-catalogue__wrapper label {
+  grid-column: -1/-2;
+}
+
+.main-catalogue__wrapper select {
+  background: transparent;
+  border: none;
+}
+
+/* GOODS BLOCK */
+
+.main-catalogue__list {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2/5;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* NAVIGATION BLOCK*/
+
+.main-catalogue__nav {
+  grid-column: -1/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+}
+
+/* FILTERS BLOCK */
+
+.main-filters {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+.main-filters__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.main-filters__input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -2021,32 +2105,74 @@ button,
   clip: rect(0 0 0 0);
 }
 
-.main-filters__m-option {
-  position: absolute;
-  width: 1em;
-  height: 1em;
-  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' fill='white' stroke='%23BDBDBD' stroke-width='2'/%3E%3C/svg%3E%0A");
+/* RADIO BUTTONS */
+
+.main-filters__label-m {
+  padding-left: 2.5em;
 }
 
-.main-filters__m-radio:checked + .main-filters__m-option {
+.main-filters__m-option {
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: -2.5em;
+  background: no-repeat url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' fill='white' stroke='%23BDBDBD' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+
+.main-filters__input:checked + .main-filters__m-option,
+.main-filters__input:checked:hover + .main-filters__m-option {
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' fill='white' stroke='%237859CF' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='8' fill='%237859CF'/%3E%3C/svg%3E%0A");
 }
 
 /* Radio Focus & Hover */
 
-.main-filters__m-radio:focus + .main-filters__m-option,
-.main-filters__m-radio:hover + .main-filters__m-option {
+.main-filters__input:hover + .main-filters__m-option {
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' fill='white' stroke='%239070EC' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='8' fill='%237859CF' fill-opacity='0.25'/%3E%3C/svg%3E%0A");
 }
 
 /* Radio Disabled*/
 
-.main-filters__m-radio:disabled + .main-filters__m-option {
+.main-filters__input:disabled + .main-filters__m-option {
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' stroke='%23E2E2E2' stroke-width='2'/%3E%3C/svg%3E%0A");
 }
 
-.main-filters__m-radio:checked:disabled + .main-filters__m-option {
+.main-filters__input:checked:disabled + .main-filters__m-option {
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' stroke='%23E2E2E2' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='8' fill='%23E2E2E2'/%3E%3C/svg%3E%0A");
+}
+
+/* CHECKBOXES*/
+
+.main-filters__label-c {
+  padding-left: 3.5em;
+}
+
+.main-filters__c-option {
+  position: absolute;
+  width: 2.7em;
+  height: 1.5em;
+  margin-left: -3.5em;
+  background: no-repeat url('data:image/svg+xml,%3Csvg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="42" height="24" rx="12" fill="%23BDBDBD"/%3E%3Ccircle cx="12" cy="12" r="10" fill="white"/%3E%3C/svg%3E');
+}
+
+.main-filters__input:checked + .main-filters__c-option,
+.main-filters__input:checked:hover + .main-filters__c-option {
+  background-image: url('data:image/svg+xml,%3Csvg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="42" height="24" rx="12" fill="%237859CF"/%3E%3Ccircle cx="30" cy="12" r="10" fill="white"/%3E%3C/svg%3E');
+}
+
+/* Checkbox Focus & Hover */
+
+.main-filters__input:hover + .main-filters__c-option {
+  background-image: url('data:image/svg+xml,%3Csvg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect x="1" y="1" width="40" height="22" rx="11" fill="%237859CF" fill-opacity="0.25" stroke="%239070EC" stroke-width="2"/%3E%3Ccircle cx="12" cy="12" r="10" fill="white"/%3E%3C/svg%3E%0A');
+}
+
+/* Checkbox Disabled*/
+
+.main-filters__input:disabled + .main-filters__c-option {
+  background-image: url('data:image/svg+xml,%3Csvg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="42" height="24" rx="12" fill="%23E2E2E2"/%3E%3Ccircle cx="12" cy="12" r="10" fill="%23F8F8F8"/%3E%3C/svg%3E%0A');
+}
+
+.main-filters__input:checked:disabled + .main-filters__c-option {
+  background-image: url('data:image/svg+xml,%3Csvg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="42" height="24" rx="12" fill="%23E2E2E2"/%3E%3Ccircle cx="30" cy="12" r="10" fill="%23BDBDBD"/%3E%3C/svg%3E%0A');
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {

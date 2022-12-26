@@ -10,7 +10,7 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=6acb773c-4054-4e18-af9e-dd0d42017374&amp;lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
         <div class="header__wrapper">
           <h1 class="visually-hidden">Drink2Go — это интернет-магазин по продаже кофейных напитков. Удобная сортировка по странам произрастания зерна и концентрации молока поможет выбрать идеальный напиток. Количество позиций для заказа не ограничено.</h1>
@@ -44,7 +44,7 @@
     </header>
     <main>
       <section class="main-intro">
-        <div class="swiper">
+        <div class="main-intro__wrapper">
           <ul class="main-intro__list swiper-wrapper container">
             <li class="main-intro__item swiper-slide" href="#">
               <!-- 1х: 600px; 2x: 1200px-->
@@ -155,119 +155,127 @@
         </div>
       </section>
       <section class="main-catalogue">
-        <div class="container">
-          <h2 class="hdr">Каталог кофейных напитков</h2><small class="sml">Каталог</small>
-          <div class="main-filters__wrapper">
-            <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
-              <fieldset class="main-filters__slider"><span>Цена</span>
-                <input class="main-filters__s-left" type="text" step="any">
-                <input class="main-filters__s-right" type="text" step="any">
-                <div class="-value"></div>
-              </fieldset>
-              <fieldset class="main-filters__milk">
-                <div class="main-filters__m-list">
-                  <label class="main-filters__m-label" for="milk-nomatter">
-                    <input class="main-filters__m-radio" type="radio" name="milk" id="milk-nomatter" value="nomatter"><span class="main-filters__m-option">Неважно</span>
-                  </label>
-                  <label class="main-filters__m-label" for="milk-animal">
-                    <input class="main-filters__m-radio" type="radio" name="milk" id="milk-animal" value="animal"><span class="main-filters__m-option">Только животное</span>
-                  </label>
-                  <label class="main-filters__m-label" for="milk-vegetalbe">
-                    <input class="main-filters__m-radio" type="radio" name="milk" id="milk-vegetalbe" value="vegetalbe"><span class="main-filters__m-option">Только растительное</span>
-                  </label>
-                  <label class="main-filters__m-label" for="milk-nomilk">
-                    <input class="main-filters__m-radio" type="radio" name="milk" id="milk-nomilk" value="nomilk"><span class="main-filters__m-option">Без молока</span>
-                  </label>
-                </div>
-              </fieldset>
-              <fieldset class="main-filters__country">
-                <div class="main-filters__c-list">
-                  <label class="main-filters__c-label" for="country-brazil">
-                    <input class="main-filters__c-checkbox" type="checkbox" name="country" id="country-brazil" value="brazil"><span class="main-filters__c-option">Бразилия</span>
-                  </label>
-                  <label class="main-filters__c-label" for="country-ethiopia">
-                    <input class="main-filters__c-checkbox" type="checkbox" name="country" id="country-ethiopia" value="ethiopia"><span class="main-filters__c-option">Эфиопия</span>
-                  </label>
-                  <label class="main-filters__c-label" for="country-columbia">
-                    <input class="main-filters__c-checkbox" type="checkbox" name="country" id="country-columbia" value="columbia"><span class="main-filters__c-option">Колумбия</span>
-                  </label>
-                  <label class="main-filters__c-label" for="country-costa-rica">
-                    <input class="main-filters__c-checkbox" type="checkbox" name="country" id="country-costa-rica" value="costa-rica"><span class="main-filters__c-option">Коста-Рика</span>
-                  </label>
-                  <label class="main-filters__c-label" for="country-peru">
-                    <input class="main-filters__c-checkbox" type="checkbox" name="country" id="country-peru" value="peru"><span class="main-filters__c-option">Перу</span>
-                  </label>
-                </div>
-              </fieldset>
-              <button class="btn btn-violet" type="submit">Применить фильтр</button>
-              <button class="btn btn-white" type="reset">Сбросить фильтр</button>
-            </form>
+        <div class="main-catalogue__wrapper">
+          <div class="container">
+            <h2 class="hdr">Каталог кофейных напитков</h2><small class="sml">Каталог</small>
+            <div class="main-filters">
+              <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+                <fieldset class="main-filters__slider"><span>Цена</span>
+                  <input class="main-filters__s-left" type="text" step="any">
+                  <input class="main-filters__s-right" type="text" step="any">
+                  <div class="-value"></div>
+                </fieldset>
+                <fieldset class="main-filters__milk">
+                  <div class="main-filters__list">
+                    <label class="main-filters__label-m" for="milk-nomatter">
+                      <input class="main-filters__input" type="radio" name="milk" id="milk-nomatter" value="nomatter"><span class="main-filters__m-option"></span>Неважно
+                    </label>
+                    <label class="main-filters__label-m" for="milk-animal">
+                      <input class="main-filters__input" type="radio" name="milk" id="milk-animal" value="animal"><span class="main-filters__m-option"></span>Только животное
+                    </label>
+                    <label class="main-filters__label-m" for="milk-vegetalbe">
+                      <input class="main-filters__input" type="radio" name="milk" id="milk-vegetalbe" value="vegetalbe"><span class="main-filters__m-option"></span>Только растительное
+                    </label>
+                    <label class="main-filters__label-m" for="milk-nomilk">
+                      <input class="main-filters__input" type="radio" name="milk" id="milk-nomilk" value="nomilk"><span class="main-filters__m-option"></span>Без молока
+                    </label>
+                  </div>
+                </fieldset>
+                <fieldset class="main-filters__country">
+                  <div class="main-filters__list">
+                    <label class="main-filters__label-c" for="country-brazil">
+                      <input class="main-filters__input" type="checkbox" name="country" id="country-brazil" value="brazil"><span class="main-filters__c-option"></span>Бразилия
+                    </label>
+                    <label class="main-filters__label-c" for="country-ethiopia">
+                      <input class="main-filters__input" type="checkbox" name="country" id="country-ethiopia" value="ethiopia"><span class="main-filters__c-option"></span>Эфиопия
+                    </label>
+                    <label class="main-filters__label-c" for="country-columbia">
+                      <input class="main-filters__input" type="checkbox" name="country" id="country-columbia" value="columbia"><span class="main-filters__c-option"></span>Колумбия
+                    </label>
+                    <label class="main-filters__label-c" for="country-costa-rica">
+                      <input class="main-filters__input" type="checkbox" name="country" id="country-costa-rica" value="costa-rica"><span class="main-filters__c-option"></span>Коста-Рика
+                    </label>
+                    <label class="main-filters__label-c" for="country-peru">
+                      <input class="main-filters__input" type="checkbox" name="country" id="country-peru" value="peru"><span class="main-filters__c-option"></span>Перу
+                    </label>
+                  </div>
+                </fieldset>
+                <button class="btn btn-violet" type="submit">Применить фильтр</button>
+                <button class="btn btn-white" type="reset">Сбросить фильтр</button>
+              </form>
+            </div>
+            <label for="gradation">Сортировка:
+              <select name="gradation" id="gradation">
+                <option value="default">по умолчанию</option>
+                <option value="expensive">сначала дорогие</option>
+                <option value="cheap">сначала дешевые</option>
+                <option value="high-ranked">высокий рейтинг</option>
+              </select>
+            </label>
+            <div class="main-catalogue__list swiper-wrapper"><a class="main-catalogue__item swiper-slide" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_1@1x.webp, img/coffee_catalogue/coffee_can_1@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_1@1x.png" srcset="img/coffee_catalogue/coffee_can_1@2x.png 2x" alt="Кофейный напиток лот №1" width="130" height="188">
+                </picture>
+                <h3>Декаф Флет Уайт</h3>
+                <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
+                <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item swiper-slide" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_2@1x.webp, img/coffee_catalogue/coffee_can_2@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_2@1x.png" srcset="img/coffee_catalogue/coffee_can_2@2x.png 2x" alt="Кофейный напиток лот №2" width="130" height="188">
+                </picture>
+                <h3>Декаф Флет Уайт</h3>
+                <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
+                <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item swiper-slide" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_3@1x.webp, img/coffee_catalogue/coffee_can_3@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_3@1x.png" srcset="img/coffee_catalogue/coffee_can_3@2x.png 2x" alt="Кофейный напиток лот №3" width="130" height="188">
+                </picture>
+                <h3>Декаф Флет Уайт</h3>
+                <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
+                <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item swiper-slide" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_4@1x.webp, img/coffee_catalogue/coffee_can_4@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_4@1x.png" srcset="img/coffee_catalogue/coffee_can_4@2x.png 2x" alt="Кофейный напиток лот №4" width="130" height="188">
+                </picture>
+                <h3>Декаф Флет Уайт</h3>
+                <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
+                <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item swiper-slide" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_5@1x.webp, img/coffee_catalogue/coffee_can_5@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_5@1x.png" srcset="img/coffee_catalogue/coffee_can_5@2x.png 2x" alt="Кофейный напиток лот №5" width="130" height="188">
+                </picture>
+                <h3>Декаф Флет Уайт</h3>
+                <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
+                <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item swiper-slide" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_6@1x.webp, img/coffee_catalogue/coffee_can_6@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_6@1x.png" srcset="img/coffee_catalogue/coffee_can_6@2x.png 2x" alt="Кофейный напиток лот №6" width="130" height="188">
+                </picture>
+                <h3>Декаф Флет Уайт</h3>
+                <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
+                <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item swiper-slide" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_7@1x.webp, img/coffee_catalogue/coffee_can_7@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_7@1x.png" srcset="img/coffee_catalogue/coffee_can_7@2x.png 2x" alt="Кофейный напиток лот №7" width="130" height="188">
+                </picture>
+                <h3>Декаф Флет Уайт</h3>
+                <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
+                <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item swiper-slide" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_8@1x.webp, img/coffee_catalogue/coffee_can_8@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_8@1x.png" srcset="img/coffee_catalogue/coffee_can_8@2x.png 2x" alt="Кофейный напиток лот №8" width="130" height="188">
+                </picture>
+                <h3>Декаф Флет Уайт</h3>
+                <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
+                <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item swiper-slide" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_9@1x.webp, img/coffee_catalogue/coffee_can_9@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_9@1x.png" srcset="img/coffee_catalogue/coffee_can_9@2x.png 2x" alt="Кофейный напиток лот №9" width="130" height="188">
+                </picture>
+                <h3>Декаф Флет Уайт</h3>
+                <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
+                <button class="btn btn-violet" type="button">В корзину</button></a>
+            </div>
+            <div class="main-catalogue__nav">
+              <button class="main-catalogue__button main-catalogue__button--prev" type="button">Назад</button>
+              <button class="main-catalogue__pagination" type="button">1</button>
+              <button class="main-catalogue__pagination" type="button">2</button>
+              <button class="main-catalogue__pagination" type="button">3</button>
+              <button class="main-catalogue__button main-catalogue__button--next" type="button">Вперед</button>
+            </div>
           </div>
-          <select name="gradation">
-            <option value="default">по умолчанию</option>
-            <option value="expensive">сначала дорогие</option>
-            <option value="cheap">сначала дешевые</option>
-            <option value="high-ranked">высокий рейтинг</option>
-          </select>
-          <div class="main-catalogue__list"><a class="main-catalogue__item" href="#">
-              <picture>
-                <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_1@1x.webp, img/coffee_catalogue/coffee_can_1@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_1@1x.png" srcset="img/coffee_catalogue/coffee_can_1@2x.png 2x" alt="Кофейный напиток лот №1" width="130" height="188">
-              </picture>
-              <h3>Декаф Флет Уайт</h3>
-              <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
-              <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item" href="#">
-              <picture>
-                <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_2@1x.webp, img/coffee_catalogue/coffee_can_2@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_2@1x.png" srcset="img/coffee_catalogue/coffee_can_2@2x.png 2x" alt="Кофейный напиток лот №2" width="130" height="188">
-              </picture>
-              <h3>Декаф Флет Уайт</h3>
-              <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
-              <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item" href="#">
-              <picture>
-                <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_3@1x.webp, img/coffee_catalogue/coffee_can_3@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_3@1x.png" srcset="img/coffee_catalogue/coffee_can_3@2x.png 2x" alt="Кофейный напиток лот №3" width="130" height="188">
-              </picture>
-              <h3>Декаф Флет Уайт</h3>
-              <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
-              <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item" href="#">
-              <picture>
-                <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_4@1x.webp, img/coffee_catalogue/coffee_can_4@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_4@1x.png" srcset="img/coffee_catalogue/coffee_can_4@2x.png 2x" alt="Кофейный напиток лот №4" width="130" height="188">
-              </picture>
-              <h3>Декаф Флет Уайт</h3>
-              <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
-              <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item" href="#">
-              <picture>
-                <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_5@1x.webp, img/coffee_catalogue/coffee_can_5@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_5@1x.png" srcset="img/coffee_catalogue/coffee_can_5@2x.png 2x" alt="Кофейный напиток лот №5" width="130" height="188">
-              </picture>
-              <h3>Декаф Флет Уайт</h3>
-              <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
-              <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item" href="#">
-              <picture>
-                <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_6@1x.webp, img/coffee_catalogue/coffee_can_6@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_6@1x.png" srcset="img/coffee_catalogue/coffee_can_6@2x.png 2x" alt="Кофейный напиток лот №6" width="130" height="188">
-              </picture>
-              <h3>Декаф Флет Уайт</h3>
-              <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
-              <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item" href="#">
-              <picture>
-                <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_7@1x.webp, img/coffee_catalogue/coffee_can_7@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_7@1x.png" srcset="img/coffee_catalogue/coffee_can_7@2x.png 2x" alt="Кофейный напиток лот №7" width="130" height="188">
-              </picture>
-              <h3>Декаф Флет Уайт</h3>
-              <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
-              <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item" href="#">
-              <picture>
-                <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_8@1x.webp, img/coffee_catalogue/coffee_can_8@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_8@1x.png" srcset="img/coffee_catalogue/coffee_can_8@2x.png 2x" alt="Кофейный напиток лот №8" width="130" height="188">
-              </picture>
-              <h3>Декаф Флет Уайт</h3>
-              <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
-              <button class="btn btn-violet" type="button">В корзину</button></a><a class="main-catalogue__item" href="#">
-              <picture>
-                <source type="image/webp" srcset="img/coffee_catalogue/coffee_can_9@1x.webp, img/coffee_catalogue/coffee_can_9@2x.webp 2x"><img src="img/coffee_catalogue/coffee_can_9@1x.png" srcset="img/coffee_catalogue/coffee_can_9@2x.png 2x" alt="Кофейный напиток лот №9" width="130" height="188">
-              </picture>
-              <h3>Декаф Флет Уайт</h3>
-              <p>Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p><span>225₽</span>
-              <button class="btn btn-violet" type="button">В корзину</button></a>
-          </div>
-          <div class="swiper-pagination">1</div>
-          <div class="swiper-pagination">2</div>
-          <div class="swiper-pagination">3</div>
         </div>
       </section>
       <section class="main-location">

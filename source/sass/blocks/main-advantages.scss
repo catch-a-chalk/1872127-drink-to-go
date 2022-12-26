@@ -1,5 +1,7 @@
 .main-advantages {
-  div {
+  padding-top: 100px;
+
+  .container {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -24,6 +26,7 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  gap: 30px;
 }
 
 .main-advantages__item {

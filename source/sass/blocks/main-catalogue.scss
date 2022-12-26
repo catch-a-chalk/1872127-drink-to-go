@@ -1,0 +1,41 @@
+.main-catalogue__wrapper {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  h2 {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  small {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  /* SELECT BLOCK */
+  label {
+    grid-column: -1 / -2;
+  }
+
+  select {
+    background: transparent;
+    border: none;
+  }
+}
+
+/* GOODS BLOCK */
+.main-catalogue__list {
+  grid-column: 2 / 5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* NAVIGATION BLOCK*/
+.main-catalogue__nav {
+  grid-column: -1 / 4;
+  display: flex;
+  justify-content: end;
+}

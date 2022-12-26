@@ -1,29 +1,31 @@
 - const SORT = [ { value:'default', text:'по умолчанию' }, { value:'expensive', text:'сначала дорогие' }, { value:'cheap', text:'сначала дешевые' }, { value:'high-ranked', text:'высокий рейтинг' }, ]
 - const DATA = [ { header:'Декаф Флет Уайт' }, { header:'Декаф Флет Уайт' }, { header:'Декаф Флет Уайт' }, { header:'Декаф Флет Уайт' }, { header:'Декаф Флет Уайт' }, { header:'Декаф Флет Уайт' }, { header:'Декаф Флет Уайт' }, { header:'Декаф Флет Уайт' }, { header:'Декаф Флет Уайт' }, ]
-//- Добавить классы для свайпера
 section.main-catalogue
-  .container
-    h2.hdr Каталог кофейных напитков
-    small.sml Каталог
-    include ./../includes/components/main-filters
-    select(name='gradation')
-      each sort in SORT
-        option(value=sort.value)=sort.text
-    .main-catalogue__list
-      each data, index in DATA
-        -
-          const currentIndex = index + 1
-          const imgPath = 'img/coffee_catalogue/coffee_can_' + currentIndex
-        a(href='#').main-catalogue__item
-          picture
-            source(type='image/webp' srcset=`${imgPath}@1x.webp, ${imgPath}@2x.webp 2x`)
-            img(src=`${imgPath}@1x.png` srcset=`${imgPath}@2x.png 2x` alt=`Кофейный напиток лот №${currentIndex}` width=130 height=188)
-          h3=data.header
-          p Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком
-          span 225₽
-          button.btn.btn-violet(type="button") В корзину
-    //- .swiper-button-prev Назад
-    .swiper-pagination 1
-    .swiper-pagination 2
-    .swiper-pagination 3
-    //- .swiper-button-next Вперед
+  .main-catalogue__wrapper
+    .container
+      h2.hdr Каталог кофейных напитков
+      small.sml Каталог
+      include ./../includes/components/main-filters
+      label(for='gradation') Сортировка:
+        select(name='gradation' id='gradation')
+          each sort in SORT
+            option(value=sort.value)=sort.text
+      .main-catalogue__list.swiper-wrapper
+        each data, index in DATA
+          -
+            const currentIndex = index + 1
+            const imgPath = 'img/coffee_catalogue/coffee_can_' + currentIndex
+          a(href='#').main-catalogue__item.swiper-slide
+            picture
+              source(type='image/webp' srcset=`${imgPath}@1x.webp, ${imgPath}@2x.webp 2x`)
+              img(src=`${imgPath}@1x.png` srcset=`${imgPath}@2x.png 2x` alt=`Кофейный напиток лот №${currentIndex}` width=130 height=188)
+            h3=data.header
+            p Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком
+            span 225₽
+            button.btn.btn-violet(type="button") В корзину
+      .main-catalogue__nav
+        button.main-catalogue__button.main-catalogue__button--prev(type="button") Назад
+        button.main-catalogue__pagination(type="button") 1
+        button.main-catalogue__pagination(type="button") 2
+        button.main-catalogue__pagination(type="button") 3
+        button.main-catalogue__button.main-catalogue__button--next(type="button") Вперед
