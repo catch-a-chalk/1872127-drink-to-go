@@ -1,7 +1,13 @@
+.main-catalogue {
+  background-color: $color-white-smoke;
+}
+
 .main-catalogue__wrapper {
   .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    padding-top: 100px;
   }
 
   h2 {
@@ -12,25 +18,52 @@
   small {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
+    text-align: center;
   }
+}
 
-  /* SELECT BLOCK */
-  label {
-    grid-column: -1 / -2;
-  }
+/* SELECT BLOCK */
+.main-catalogue__gradation {
+  grid-column: -1 / -2;
+  grid-row: 2 / 3;
+  justify-self: end;
+  align-self: end;
+  padding: 15px 0;
+}
 
-  select {
-    background: transparent;
-    border: none;
-  }
+select {
+  background: transparent;
+  border: none;
 }
 
 /* GOODS BLOCK */
 .main-catalogue__list {
-  grid-column: 2 / 5;
+  grid-column: 2 / -1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 317px);
   grid-template-rows: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.main-catalogue__item {
+  padding: 30px;
+  position: relative;
+  background-color: $color-default-white;
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+
+  &:hover {
+    z-index: 1;
+    box-shadow: 0 5px 15px $color-night-rider;
+    top: -2px;
+  }
+
+  img {
+    object-fit: cover;
+    margin: 0 auto;
+  };
 }
 
 /* NAVIGATION BLOCK*/

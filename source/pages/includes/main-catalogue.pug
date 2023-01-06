@@ -6,7 +6,7 @@ section.main-catalogue
       h2.hdr Каталог кофейных напитков
       small.sml Каталог
       include ./../includes/components/main-filters
-      label(for='gradation') Сортировка:
+      label.main-catalogue__gradation(for='gradation') Сортировка:
         select(name='gradation' id='gradation')
           each sort in SORT
             option(value=sort.value)=sort.text
