@@ -34,6 +34,9 @@
 select {
   background: transparent;
   border: none;
+  width: 175px;
+  padding-left: 20px;
+  color: $color-slate-blue;
 }
 
 /* GOODS BLOCK */
@@ -44,6 +47,7 @@ select {
   grid-template-rows: repeat(2, 1fr);
   justify-content: space-between;
   gap: 30px;
+  margin-top: 13px;
 }
 
 .main-catalogue__item {

@@ -160,13 +160,26 @@
             <h2 class="hdr">Каталог кофейных напитков</h2><small class="sml">Каталог</small>
             <div class="main-filters">
               <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
-                <fieldset class="main-filters__slider"><span>Цена</span>
-                  <input class="main-filters__s-left" type="text" step="any">
-                  <input class="main-filters__s-right" type="text" step="any">
-                  <div class="-value"></div>
+                <fieldset class="main-filters__range-slider">
+                  <div class="main-filters__slider">
+                    <div class="main-filters__progress"></div>
+                  </div>
+                  <div class="main-filters__range-input">
+                    <input class="main-filters__range-min" type="range" min="0" max="1000" value="0" step="100">
+                    <input class="main-filters__range-max" type="range" min="100" max="1000" value="900" step="100">
+                  </div>
+                  <div class="main-filters__price-input">
+                    <div class="main-filters__field">
+                      <input class="main-filters__input-min" type="number" value="0">
+                    </div>
+                    <div class="main-filters__separator"></div>
+                    <div class="main-filters__field">
+                      <input class="main-filters__input-max" type="number" value="900">
+                    </div>
+                  </div>
                 </fieldset>
-                <fieldset class="main-filters__milk">
-                  <div class="main-filters__list">
+                <fieldset class="main-filters__milk">Наличие молока
+                  <div class="main-filters__list"> 
                     <label class="main-filters__label-m" for="milk-nomatter">
                       <input class="main-filters__input" type="radio" name="milk" id="milk-nomatter" value="nomatter"><span class="main-filters__m-option"></span>Неважно
                     </label>
@@ -181,7 +194,7 @@
                     </label>
                   </div>
                 </fieldset>
-                <fieldset class="main-filters__country">
+                <fieldset class="main-filters__country">Страна произрастания
                   <div class="main-filters__list">
                     <label class="main-filters__label-c" for="country-brazil">
                       <input class="main-filters__input" type="checkbox" name="country" id="country-brazil" value="brazil"><span class="main-filters__c-option"></span>Бразилия

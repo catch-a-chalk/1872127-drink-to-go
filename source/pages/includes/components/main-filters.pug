@@ -6,24 +6,31 @@
 .main-filters
   //- grid-контейнер, содержащий 4 столбца
   form(action='https://echo.htmlacademy.ru/' method='post' autocomplete='off')
-    fieldset.main-filters__slider
-      span Цена
-      input.main-filters__s-left(type='text' step='any')
-      input.main-filters__s-right(type='text' step='any')
-      .-value
-    fieldset.main-filters__milk
-      .main-filters__list
+    fieldset.__range-slider
+      .__slider
+          .__progress
+      .__range-input
+        input.__range-min(type='range' min='0' max='1000' value='0' step='100')
+        input.__range-max(type='range' min='100' max='1000' value='900' step='100')
+      .__price-input
+        .__field
+          input.__input-min(type='number' value='0')
+        .__separator
+        .__field
+          input.__input-max(type='number' value='900')
+    fieldset.__milk Наличие молока
+      .__list 
         each milk in MILK
-          label.main-filters__label-m(for=`milk-${milk.value}`)
-            input.main-filters__input(type='radio' name='milk' id=`milk-${milk.value}` value=milk.value)
-            span.main-filters__m-option
+          label.__label-m(for=`milk-${milk.value}`)
+            input.__input(type='radio' name='milk' id=`milk-${milk.value}` value=milk.value)
+            span.__m-option
             =milk.span
-    fieldset.main-filters__country
-      .main-filters__list
+    fieldset.__country Страна произрастания
+      .__list
         each country in COUNTRY
-          label.main-filters__label-c(for=`country-${country.value}`)
-            input.main-filters__input(type='checkbox' name='country' id=`country-${country.value}` value=country.value)
-            span.main-filters__c-option
+          label.__label-c(for=`country-${country.value}`)
+            input.__input(type='checkbox' name='country' id=`country-${country.value}` value=country.value)
+            span.__c-option
             =country.span
     button.btn.btn-violet(type='submit') Применить фильтр
     button.btn.btn-white(type='reset') Сбросить фильтр
