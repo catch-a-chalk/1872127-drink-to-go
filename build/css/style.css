@@ -1581,10 +1581,20 @@ button,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 10px 0;
-  padding: 10px 20px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
   color: #ffffff;
   background-color: #2c39f2;
+  border-radius: 4px;
   border: none;
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
@@ -1603,11 +1613,11 @@ button,
 
 .btn-violet {
   background-color: #7859cf;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: center;
-  border-radius: 4px;
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #7859cf;
 }
 
 .modal {
@@ -1933,6 +1943,7 @@ button,
 }
 
 .main-intro__price a {
+  font-size: 16px;
   -webkit-box-ordinal-group: 4;
   -ms-flex-order: 3;
   order: 3;
@@ -2127,21 +2138,40 @@ select {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
+  position: relative;
 }
 
 .main-filters fieldset {
   padding: 0;
-  margin: 0 0 30px;
+  margin: 0 0 15px;
   border: none;
+}
+
+.main-filters p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0;
+  margin: 15px 0;
+}
+
+.main-filters p:first-of-type {
+  position: absolute;
+  top: -54px;
+}
+
+.main-filters label {
+  margin: 9px 0;
 }
 
 .main-filters span {
   position: absolute;
 }
 
+/* RANGE MAKUP*/
+
 .main-filters__range-slider {
   position: relative;
-  padding: 0;
 }
 
 .main-filters__price-input {
@@ -2155,7 +2185,7 @@ select {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 35px 0;
+  margin: 34px 0 10px;
 }
 
 .main-filters__field {
@@ -2237,6 +2267,7 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
 
 input[type=range]::-moz-range-thumb {
@@ -2244,11 +2275,14 @@ input[type=range]::-moz-range-thumb {
   width: 24px;
   border: 1px solid #9070ec;
   border-radius: 50%;
-  background: white;
+  background: #ffffff;
   pointer-events: auto;
   -moz-appearance: none;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
+
+/* Buttons */
 
 .main-filters__list {
   display: -webkit-box;
@@ -2258,6 +2292,7 @@ input[type=range]::-moz-range-thumb {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .main-filters__input {
@@ -2334,6 +2369,19 @@ input[type=range]::-moz-range-thumb {
 
 .main-filters__input:checked:disabled + .main-filters__c-option {
   background-image: url('data:image/svg+xml,%3Csvg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="42" height="24" rx="12" fill="%23E2E2E2"/%3E%3Ccircle cx="30" cy="12" r="10" fill="%23BDBDBD"/%3E%3C/svg%3E%0A');
+}
+
+.main-filters__buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(150px, 1fr))[2];
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 18px;
+  margin: 20px 0;
+}
+
+.main-filters__buttons button {
+  padding: 10px 3px;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {

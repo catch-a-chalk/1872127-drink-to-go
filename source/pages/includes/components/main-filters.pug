@@ -4,9 +4,9 @@
 - const COUNTRY = [{ value:'brazil', span:'Бразилия' }, { value:'ethiopia', span:'Эфиопия' }, { value:'columbia', span:'Колумбия' }, { value:'costa-rica', span:'Коста-Рика' }, { value:'peru', span:'Перу' }, ]
 
 .main-filters
-  //- grid-контейнер, содержащий 4 столбца
   form(action='https://echo.htmlacademy.ru/' method='post' autocomplete='off')
-    fieldset.__range-slider
+    fieldset.__range-slider 
+    p Цена
       .__slider
           .__progress
       .__range-input
@@ -18,19 +18,22 @@
         .__separator
         .__field
           input.__input-max(type='number' value='900')
-    fieldset.__milk Наличие молока
-      .__list 
-        each milk in MILK
-          label.__label-m(for=`milk-${milk.value}`)
-            input.__input(type='radio' name='milk' id=`milk-${milk.value}` value=milk.value)
-            span.__m-option
-            =milk.span
-    fieldset.__country Страна произрастания
-      .__list
-        each country in COUNTRY
-          label.__label-c(for=`country-${country.value}`)
-            input.__input(type='checkbox' name='country' id=`country-${country.value}` value=country.value)
-            span.__c-option
-            =country.span
-    button.btn.btn-violet(type='submit') Применить фильтр
-    button.btn.btn-white(type='reset') Сбросить фильтр
+    fieldset
+    p Наличие молока
+    .__list 
+      each milk in MILK
+        label.__label-m(for=`milk-${milk.value}`)
+          input.__input(type='radio' name='milk' id=`milk-${milk.value}` value=milk.value)
+          span.__m-option
+          =milk.span
+    fieldset
+    p Страна произрастания
+    .__list
+      each country in COUNTRY
+        label.__label-c(for=`country-${country.value}`)
+          input.__input(type='checkbox' name='country' id=`country-${country.value}` value=country.value)
+          span.__c-option
+          =country.span
+    .__buttons
+      button.btn.btn-violet(type='submit') Применить фильтр
+      button.btn.btn-white(type='reset') Сбросить фильтр

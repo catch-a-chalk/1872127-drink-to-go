@@ -160,7 +160,8 @@
             <h2 class="hdr">Каталог кофейных напитков</h2><small class="sml">Каталог</small>
             <div class="main-filters">
               <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
-                <fieldset class="main-filters__range-slider">
+                <fieldset class="main-filters__range-slider"> </fieldset>
+                <p>Цена
                   <div class="main-filters__slider">
                     <div class="main-filters__progress"></div>
                   </div>
@@ -177,44 +178,46 @@
                       <input class="main-filters__input-max" type="number" value="900">
                     </div>
                   </div>
-                </fieldset>
-                <fieldset class="main-filters__milk">Наличие молока
-                  <div class="main-filters__list"> 
-                    <label class="main-filters__label-m" for="milk-nomatter">
-                      <input class="main-filters__input" type="radio" name="milk" id="milk-nomatter" value="nomatter"><span class="main-filters__m-option"></span>Неважно
-                    </label>
-                    <label class="main-filters__label-m" for="milk-animal">
-                      <input class="main-filters__input" type="radio" name="milk" id="milk-animal" value="animal"><span class="main-filters__m-option"></span>Только животное
-                    </label>
-                    <label class="main-filters__label-m" for="milk-vegetalbe">
-                      <input class="main-filters__input" type="radio" name="milk" id="milk-vegetalbe" value="vegetalbe"><span class="main-filters__m-option"></span>Только растительное
-                    </label>
-                    <label class="main-filters__label-m" for="milk-nomilk">
-                      <input class="main-filters__input" type="radio" name="milk" id="milk-nomilk" value="nomilk"><span class="main-filters__m-option"></span>Без молока
-                    </label>
-                  </div>
-                </fieldset>
-                <fieldset class="main-filters__country">Страна произрастания
-                  <div class="main-filters__list">
-                    <label class="main-filters__label-c" for="country-brazil">
-                      <input class="main-filters__input" type="checkbox" name="country" id="country-brazil" value="brazil"><span class="main-filters__c-option"></span>Бразилия
-                    </label>
-                    <label class="main-filters__label-c" for="country-ethiopia">
-                      <input class="main-filters__input" type="checkbox" name="country" id="country-ethiopia" value="ethiopia"><span class="main-filters__c-option"></span>Эфиопия
-                    </label>
-                    <label class="main-filters__label-c" for="country-columbia">
-                      <input class="main-filters__input" type="checkbox" name="country" id="country-columbia" value="columbia"><span class="main-filters__c-option"></span>Колумбия
-                    </label>
-                    <label class="main-filters__label-c" for="country-costa-rica">
-                      <input class="main-filters__input" type="checkbox" name="country" id="country-costa-rica" value="costa-rica"><span class="main-filters__c-option"></span>Коста-Рика
-                    </label>
-                    <label class="main-filters__label-c" for="country-peru">
-                      <input class="main-filters__input" type="checkbox" name="country" id="country-peru" value="peru"><span class="main-filters__c-option"></span>Перу
-                    </label>
-                  </div>
-                </fieldset>
-                <button class="btn btn-violet" type="submit">Применить фильтр</button>
-                <button class="btn btn-white" type="reset">Сбросить фильтр</button>
+                </p>
+                <fieldset></fieldset>
+                <p>Наличие молока</p>
+                <div class="main-filters__list"> 
+                  <label class="main-filters__label-m" for="milk-nomatter">
+                    <input class="main-filters__input" type="radio" name="milk" id="milk-nomatter" value="nomatter"><span class="main-filters__m-option"></span>Неважно
+                  </label>
+                  <label class="main-filters__label-m" for="milk-animal">
+                    <input class="main-filters__input" type="radio" name="milk" id="milk-animal" value="animal"><span class="main-filters__m-option"></span>Только животное
+                  </label>
+                  <label class="main-filters__label-m" for="milk-vegetalbe">
+                    <input class="main-filters__input" type="radio" name="milk" id="milk-vegetalbe" value="vegetalbe"><span class="main-filters__m-option"></span>Только растительное
+                  </label>
+                  <label class="main-filters__label-m" for="milk-nomilk">
+                    <input class="main-filters__input" type="radio" name="milk" id="milk-nomilk" value="nomilk"><span class="main-filters__m-option"></span>Без молока
+                  </label>
+                </div>
+                <fieldset></fieldset>
+                <p>Страна произрастания</p>
+                <div class="main-filters__list">
+                  <label class="main-filters__label-c" for="country-brazil">
+                    <input class="main-filters__input" type="checkbox" name="country" id="country-brazil" value="brazil"><span class="main-filters__c-option"></span>Бразилия
+                  </label>
+                  <label class="main-filters__label-c" for="country-ethiopia">
+                    <input class="main-filters__input" type="checkbox" name="country" id="country-ethiopia" value="ethiopia"><span class="main-filters__c-option"></span>Эфиопия
+                  </label>
+                  <label class="main-filters__label-c" for="country-columbia">
+                    <input class="main-filters__input" type="checkbox" name="country" id="country-columbia" value="columbia"><span class="main-filters__c-option"></span>Колумбия
+                  </label>
+                  <label class="main-filters__label-c" for="country-costa-rica">
+                    <input class="main-filters__input" type="checkbox" name="country" id="country-costa-rica" value="costa-rica"><span class="main-filters__c-option"></span>Коста-Рика
+                  </label>
+                  <label class="main-filters__label-c" for="country-peru">
+                    <input class="main-filters__input" type="checkbox" name="country" id="country-peru" value="peru"><span class="main-filters__c-option"></span>Перу
+                  </label>
+                </div>
+                <div class="main-filters__buttons">
+                  <button class="btn btn-violet" type="submit">Применить фильтр</button>
+                  <button class="btn btn-white" type="reset">Сбросить фильтр</button>
+                </div>
               </form>
             </div>
             <label class="main-catalogue__gradation" for="gradation">Сортировка:
