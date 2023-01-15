@@ -23,6 +23,7 @@
 }
 
 /* SELECT BLOCK */
+
 .main-catalogue__gradation {
   grid-column: -1 / -2;
   grid-row: 2 / 3;
@@ -40,10 +41,11 @@ select {
 }
 
 /* GOODS BLOCK */
+
 .main-catalogue__list {
   grid-column: 2 / -1;
   display: grid;
-  grid-template-columns: repeat(3, 317px);
+  grid-template-columns: repeat(3, minmax(317px, 1fr));
   grid-template-rows: repeat(2, 1fr);
   justify-content: space-between;
   gap: 30px;
@@ -51,7 +53,7 @@ select {
 }
 
 .main-catalogue__item {
-  padding: 30px;
+  padding: 50px 30px 15px;
   position: relative;
   background-color: $color-default-white;
   position: relative;
@@ -68,11 +70,91 @@ select {
     object-fit: cover;
     margin: 0 auto;
   };
+
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0;
+    margin: 30px 0 10px;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    margin: 10px 0;
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: 1fr minmax(141px, 1fr);
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  span {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+
+  button {
+    padding: 7px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 6px;
+
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0;
+    }
+  }
 }
 
 /* NAVIGATION BLOCK*/
+
 .main-catalogue__nav {
   grid-column: -1 / 4;
   display: flex;
-  justify-content: end;
+  justify-self: end;
+  width: fit-content;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  button {
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.main-catalogue__button {
+  padding: 9px 54px;
+  background-color: $color-default-white;
+  color: $color-slate-blue;
+}
+
+.main-catalogue__pagination {
+  min-width: 40px;
+  min-height: 40px;
+  padding: 8px;
+  background-color: $color-default-white;
+  color: $color-slate-blue;
+}
+
+.main-catalogue__pagination--selected {
+  margin-left: 20px;
+  margin-right: 20px;
+
+  background-color: transparent;
+  color: $color-night-rider;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0;
 }

@@ -21,11 +21,15 @@ section.main-catalogue
               img(src=`${imgPath}@1x.png` srcset=`${imgPath}@2x.png 2x` alt=`Кофейный напиток лот №${currentIndex}` width=130 height=188)
             h3=data.header
             p Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком
-            span 225₽
-            button.btn.btn-violet(type="button") В корзину
+            div
+              span 225₽
+              button.btn.btn-violet(type="button")
+                svg(width='20' height='16' aria-hidden='true')
+                    use(href='img/sprite_auto.svg#icon-buy')
+                span В корзину
       .main-catalogue__nav
         button.main-catalogue__button.main-catalogue__button--prev(type="button") Назад
         button.main-catalogue__pagination(type="button") 1
-        button.main-catalogue__pagination(type="button") 2
+        button.main-catalogue__pagination.main-catalogue__pagination--selected(type="button") 2
         button.main-catalogue__pagination(type="button") 3
         button.main-catalogue__button.main-catalogue__button--next(type="button") Вперед
