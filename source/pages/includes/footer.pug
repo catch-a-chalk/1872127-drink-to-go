@@ -35,9 +35,11 @@ footer.container
                 a(href="#")=outer.name
         .footer__contacts
           h3 Контакты
-          each contact in CONTACTS
-            .footer__contact
-              a(href=contact.href)=contact.text
+          ul
+            each contact in CONTACTS
+              li
+                span
+                a(href=contact.href)=contact.text
       ._made-by
         p 
           |Разработано в&nbsp;

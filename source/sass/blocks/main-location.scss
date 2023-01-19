@@ -1,0 +1,17 @@
+.main-location {
+  background-color: $color-white-smoke;
+  padding-top: 60px;
+}
+
+/* MAP STYLES */
+.main-location #map {
+  min-height: 540px;
+
+  @media (max-width: ($vp-1440 - 1)) {
+    min-height: 480px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    min-height: 42px;
+  }
+}
