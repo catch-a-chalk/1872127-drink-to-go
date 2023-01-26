@@ -21,6 +21,16 @@
     line-height: 16px;
     letter-spacing: 0em;
   }
+
+  @media (max-width: ($vp-1440 - 1)) {
+    p {
+      display: none;
+    }
+
+    svg {
+      width: 86px;
+    }
+  }
 }
 
 .header__main,
@@ -31,6 +41,10 @@
   gap: 20px;
   font-weight: 500;
   font-size: 12px;
+
+  @media (max-width: ($vp-1440 - 1)) {
+    gap: 0;
+  }
 }
 
 .header__user {
@@ -100,5 +114,15 @@
 
   svg {
     fill: $color-night-rider;
+  }
+
+  @media (max-width: ($vp-1440 - 1)) {
+    p {
+      display: none;
+    }
+
+    svg {
+      margin: 3px 0;
+    }
   }
 }

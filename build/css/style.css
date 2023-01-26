@@ -1466,42 +1466,6 @@ button,
   appearance: none;
 }
 
-.hdr {
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
-  order: 2;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 64px;
-  letter-spacing: 0em;
-  text-align: center;
-  margin: 5px 0 78px;
-}
-
-.sml {
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px;
-  letter-spacing: 0.04em;
-  color: #7859cf;
-  text-transform: uppercase;
-}
-
-.dot {
-  background-color: #7859cf;
-  width: 62px;
-  height: 4px;
-  border-radius: 10%;
-}
-
-.dot:hover,
-.dot:focus {
-  background-color: #d8d0ee;
-}
-
 .wrapper {
   position: relative;
   display: -webkit-box;
@@ -1526,14 +1490,6 @@ button,
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.rouble {
-  font-family: "Rouble", "Arial", sans-serif;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
 }
 
 .visually-hidden {
@@ -1573,6 +1529,54 @@ button,
   -webkit-transition: none !important;
   -o-transition: none !important;
   transition: none !important;
+}
+
+.hdr {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin: 5px 0 78px;
+}
+
+.sml {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: #7859cf;
+  text-transform: uppercase;
+}
+
+.dot {
+  background-color: #7859cf;
+  width: 62px;
+  height: 4px;
+  border-radius: 10%;
+}
+
+.dot:hover,
+.dot:focus {
+  background-color: #d8d0ee;
+}
+
+.for-desktop {
+  display: block;
+}
+
+.for-tablet {
+  display: none;
+}
+
+.for-mobile {
+  display: none;
 }
 
 .container {
@@ -2804,12 +2808,49 @@ input[type=range]::-moz-range-thumb:disabled {
 }
 
 @media (max-width: 1439px) {
+  .for-desktop {
+    display: none;
+  }
+
+  .for-tablet {
+    display: block;
+  }
+
+  .header__logotype p {
+    display: none;
+  }
+
+  .header__logotype svg {
+    width: 86px;
+  }
+
+  .header__main,
+  .header__user {
+    gap: 0;
+  }
+
+  .header__subuser p {
+    display: none;
+  }
+
+  .header__subuser svg {
+    margin: 3px 0;
+  }
+
   .main-location #map {
     min-height: 480px;
   }
 }
 
 @media (max-width: 767px) {
+  .for-tablet {
+    display: none;
+  }
+
+  .for-mobile {
+    display: block;
+  }
+
   .modal__wrapper {
     padding: 60px 16px;
   }

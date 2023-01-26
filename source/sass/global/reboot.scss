@@ -129,35 +129,3 @@ button,
 [type="submit"] {
   appearance: none;
 }
-
-.hdr {
-  order: 2;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 64px;
-  letter-spacing: 0em;
-  text-align: center;
-  margin: 5px 0 78px;
-}
-
-.sml {
-  order: 1;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px;
-  letter-spacing: 0.04em;
-  color: $color-slate-blue;
-  text-transform: uppercase;
-}
-
-.dot {
-  background-color: $color-slate-blue;
-  width: 62px;
-  height: 4px;
-  border-radius: 10%;
-
-  &:hover,
-  &:focus {
-    background-color: $color-fog;
-  }
-}
