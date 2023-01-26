@@ -23,17 +23,21 @@
               </svg></a>
             <p>Интернет-магазин <br>кофейных напитков</p>
           </div>
-          <nav class="header__main"><a class="header__submenu" href="#">Главная</a><a class="header__submenu" href="#">Каталог</a><a class="header__submenu" href="#">Доставка</a><a class="header__submenu" href="#">О нас</a>
+          <nav class="header__main"><a class="header__submenu" href="#">
+              <p>Главная</p></a><a class="header__submenu" href="#">
+              <p>Каталог</p></a><a class="header__submenu" href="#">
+              <p>Доставка</p></a><a class="header__submenu" href="#">
+              <p>О нас</p></a>
           </nav>
           <div class="header__user">
             <button class="header__subuser">
-              <svg width="16" height="16" aria-hidden="true" fill="#333333">
+              <svg width="16" height="16" aria-hidden="true">
                 <use href="img/sprite_auto.svg#icon-login"></use>
               </svg>
               <p>Войти</p>
             </button>
             <button class="header__subuser">
-              <svg width="16" height="16" aria-hidden="true" fill="#333333">
+              <svg width="16" height="16" aria-hidden="true">
                 <use href="img/sprite_auto.svg#icon-cart"></use>
               </svg>
               <p>Корзина</p>
@@ -60,7 +64,8 @@
                 <p>Свежесваренный кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком&nbsp;&mdash; то, что&nbsp;нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
                 <div class="main-intro__ordering">
                   <div class="main-intro__price"><small>295₽</small>
-                    <large>225₽</large><a class="btn btn-violet" href="#">Заказать</a>
+                    <large>225₽</large>
+                    <button class="btn btn-violet" type="button"><a href="#">Заказать</a></button>
                   </div>
                 </div>
               </div>
@@ -79,7 +84,8 @@
                 <p>Свежесваренный кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком&nbsp;&mdash; то, что&nbsp;нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
                 <div class="main-intro__ordering">
                   <div class="main-intro__price"><small>295₽</small>
-                    <large>225₽</large><a class="btn btn-violet" href="#">Заказать</a>
+                    <large>225₽</large>
+                    <button class="btn btn-violet" type="button"><a href="#">Заказать</a></button>
                   </div>
                 </div>
               </div>
@@ -98,7 +104,8 @@
                 <p>Свежесваренный кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком&nbsp;&mdash; то, что&nbsp;нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
                 <div class="main-intro__ordering">
                   <div class="main-intro__price"><small>295₽</small>
-                    <large>225₽</large><a class="btn btn-violet" href="#">Заказать</a>
+                    <large>225₽</large>
+                    <button class="btn btn-violet" type="button"><a href="#">Заказать</a></button>
                   </div>
                 </div>
               </div>
@@ -339,11 +346,11 @@
                 </div></a>
             </div>
             <div class="main-catalogue__nav">
-              <button class="main-catalogue__button main-catalogue__button--prev" type="button">Назад</button>
-              <button class="main-catalogue__pagination" type="button">1</button>
-              <button class="main-catalogue__pagination main-catalogue__pagination--selected" type="button">2</button>
-              <button class="main-catalogue__pagination" type="button">3</button>
-              <button class="main-catalogue__button main-catalogue__button--next" type="button">Вперед</button>
+              <button class="btn-white main-catalogue__button main-catalogue__button--prev" type="button">Назад</button>
+              <button class="btn-white main-catalogue__pagination" type="button">1</button>
+              <button class="btn-white main-catalogue__pagination main-catalogue__pagination--selected" type="button">2</button>
+              <button class="btn-white main-catalogue__pagination" type="button">3</button>
+              <button class="btn-white main-catalogue__button main-catalogue__button--next" type="button">Вперед</button>
             </div>
           </div>
         </div>
@@ -367,15 +374,15 @@
             </div>
             <ul class="footer__coms">
               <li class="footer__com"><a href="#">
-                  <svg width="20" height="20" aria-hidden="true" fill="#BDBDBD">
+                  <svg width="20" height="20" aria-hidden="true">
                     <use href="img/sprite_auto.svg#logo-vk"></use>
                   </svg></a></li>
               <li class="footer__com"><a href="#">
-                  <svg width="22" height="22" aria-hidden="true" fill="#BDBDBD">
+                  <svg width="22" height="22" aria-hidden="true">
                     <use href="img/sprite_auto.svg#logo-pinterest"></use>
                   </svg></a></li>
               <li class="footer__com"><a href="#">
-                  <svg width="20" height="20" aria-hidden="true" fill="#BDBDBD">
+                  <svg width="20" height="20" aria-hidden="true">
                     <use href="img/sprite_auto.svg#logo-ok"></use>
                   </svg></a></li>
             </ul>
@@ -402,10 +409,7 @@
               </ul>
             </div>
           </div>
-          <div class="footer__made-by">
-            <p>
-               Разработано в&nbsp;<strong>HTML Academy</strong></p>
-          </div>
+          <div class="footer__made-by"><a href="https://htmlacademy.ru/profession/frontender">Разработано в&nbsp;<strong>HTML Academy</strong><span></span></a></div>
         </div>
       </div>
     </footer>

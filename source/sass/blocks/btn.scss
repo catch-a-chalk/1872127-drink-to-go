@@ -1,3 +1,4 @@
+/* REGULAR BUTTONS */
 .btn {
   display: inline-flex;
   justify-content: center;
@@ -16,29 +17,46 @@
 
   transition: opacity $trans-default;
 
+  a {
+    color: $color-default-white;
+  }
+
   &--red {
     background-color: $color-torch-red;
   }
 
   &:disabled {
-    opacity: 0.5;
-
+    background-color: $color-silver;
     pointer-events: none;
   }
+}
 
-  @media (hover: hover), screen and (min-width: 0\0) {
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
+/* VIOLET BUTTONS*/
+.btn-violet {
+  background-color: $color-slate-blue;
+
+  &:hover,
+  &:focus {
+    background-color: $color-medium-purple;
+  }
+
+  &:active {
+    background-color: $color-royale-purple;
   }
 }
 
-.btn-violet {
-  background-color: $color-slate-blue;
-}
-
+/* WHITE BUTTONS*/
 .btn-white {
   background-color: $color-default-white;
   color: $color-slate-blue;
+
+  &:hover,
+  &:focus {
+    background-color: $color-medium-purple;
+    color: $color-default-white;
+  }
+
+  &:active {
+    background-color: $color-royale-purple;
+  }
 }

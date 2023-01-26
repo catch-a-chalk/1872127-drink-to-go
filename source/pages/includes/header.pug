@@ -17,10 +17,11 @@ header.header
           | кофейных напитков
       nav.header__main
         each menu in MENUS
-            a(href='#').header__submenu=menu.text
+            a(href='#').header__submenu
+              p=menu.text
       .header__user
         each user in USERS
           button.header__subuser
-            svg(width='16' height='16' aria-hidden='true' fill='#333333')
+            svg(width='16' height='16' aria-hidden='true')
               use(href=`img/sprite_auto.svg#icon-${user.icon}`)
             p=user.func

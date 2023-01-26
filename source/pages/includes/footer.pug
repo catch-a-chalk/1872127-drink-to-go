@@ -19,7 +19,7 @@ footer.container
           each com in COMS
             li._com
               a(href="#")
-                svg(width=com.value height=com.value aria-hidden='true' fill='#BDBDBD')
+                svg(width=com.value height=com.value aria-hidden='true')
                   use(href=`img/sprite_auto.svg#logo-${com.social}`)
       ._blocks
         .footer__inner
@@ -41,6 +41,7 @@ footer.container
                 span
                 a(href=contact.href)=contact.text
       ._made-by
-        p 
+        a(href="https://htmlacademy.ru/profession/frontender")
           |Разработано в&nbsp;
           strong HTML Academy
+          span

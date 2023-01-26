@@ -155,4 +155,9 @@ button,
   width: 62px;
   height: 4px;
   border-radius: 10%;
+
+  &:hover,
+  &:focus {
+    background-color: $color-fog;
+  }
 }

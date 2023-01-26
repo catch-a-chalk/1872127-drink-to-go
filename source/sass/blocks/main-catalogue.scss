@@ -35,7 +35,8 @@
 select {
   background: transparent;
   border: none;
-  width: 175px;
+  cursor: pointer;
+  width: auto;
   padding-left: 20px;
   color: $color-slate-blue;
 }
@@ -130,31 +131,28 @@ select {
   button {
     border: none;
     cursor: pointer;
+    border-radius: 4px;
   }
 }
 
 .main-catalogue__button {
   padding: 9px 54px;
-  background-color: $color-default-white;
-  color: $color-slate-blue;
 }
 
 .main-catalogue__pagination {
   min-width: 40px;
   min-height: 40px;
   padding: 8px;
-  background-color: $color-default-white;
-  color: $color-slate-blue;
-}
 
-.main-catalogue__pagination--selected {
-  margin-left: 20px;
-  margin-right: 20px;
-
-  background-color: transparent;
-  color: $color-night-rider;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0;
+  &--selected {
+    margin-left: 20px;
+    margin-right: 20px;
+  
+    background-color: transparent;
+    color: $color-night-rider;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
 }
