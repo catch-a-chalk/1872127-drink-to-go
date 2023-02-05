@@ -7,14 +7,20 @@
   &__wrapper {
     position: relative;
   }
-}
 
-.main-intro__container {
-  position: relative;
-}
+  &__container {
+    position: relative;
+  }
 
-.main-intro__list {
-  list-style-type: none;
+  &__list {
+    list-style-type: none;
+  }
+
+  @media (max-width: ($vp-1440 - 1)) {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background: linear-gradient(to bottom, $color-bridal-health 0 calc(100vh - 245px), $color-default-white 100px);
+  }
 }
 
 .main-intro__item {
@@ -22,6 +28,18 @@
   grid-template-columns: auto calc(50vw - 50px);
   gap: 40px;
   justify-content: center;
+
+  @media (max-width: ($vp-1440 - 1)) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    justify-items: center;
+
+    picture {
+      order: 2;
+      width: 476px;
+      height: 476px;
+    }
+  }
 }
 
 .main-intro__description {
@@ -49,10 +67,28 @@
     line-height: 32px;
     letter-spacing: 0em;
     order: 3;
+
+    @media (max-width: ($vp-1440 - 1)) {
+      margin-top: 16px;
+      margin-left: 60px;
+      margin-right: 60px;
+    }
   }
 
   div {
     order: 4;
+  }
+
+  @media (max-width: ($vp-1440 - 1)) {
+    order: 1;
+    text-align: center;
+  }
+}
+
+.main-intro__ordering {
+  @media (max-width: ($vp-1440 - 1)) {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -117,6 +153,10 @@
 .main-intro__pagination {
   text-align: center;
   margin-top: -5px;
+
+  @media (max-width: ($vp-1440 - 1)) {
+    display: none;
+  }
 }
 
 .main-intro__button--prev {

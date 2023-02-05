@@ -11,7 +11,7 @@ export default function mySwiper() {
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 50,
+        spaceBetween: 25,
       },
     },
 

@@ -1,6 +1,10 @@
 .main-location {
   background-color: $color-white-smoke;
   padding-top: 60px;
+
+  @media (max-width: ($vp-1440 - 1)) {
+    padding-top: 45px;
+  }
 }
 
 /* MAP STYLES */

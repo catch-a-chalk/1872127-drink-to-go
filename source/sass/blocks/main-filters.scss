@@ -5,9 +5,20 @@
   grid-row: 3 / 4;
   position: relative;
 
+  @media (max-width: ($vp-1440 - 1)) {
+    grid-column: 1 / -1;
+  }
+
+  form {
+    @media (max-width: ($vp-1440 - 1)) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+  }
+
   fieldset {
     padding: 0;
-    margin: 0 0 15px;
     border: none;
   }
 
@@ -16,16 +27,11 @@
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0;
-    margin: 15px 0;
-
-    &:first-of-type {
-      position: absolute;
-      top: -54px;
-    }
+    margin: 0 0 -8px 0;
   }
 
   label {
-    margin: 9px 0;
+    margin: 10px 0;
   }
 
   span {
@@ -33,10 +39,27 @@
   }
 }
 
+.main-filters__cell {
+  &:first-child p {
+    position: relative;
+    top: -40px;
+
+    @media (max-width: ($vp-1440 - 1)) {
+      top: 0;
+    }
+  }
+}
+
 /* RANGE MAKUP*/
 
 .main-filters__range-slider {
   position: relative;
+  margin: 0 0 20px;
+
+  
+  @media (max-width: ($vp-1440 - 1)) {
+    margin: 45px 0 20px;
+  }
 }
 
 .main-filters__price-input{
@@ -52,6 +75,10 @@
   width: 134px;
   height: 40px;
   align-items: center;
+
+  @media (max-width: ($vp-1440 - 1)) {
+    width: 92px;
+  }
 }
 
 .main-filters__field input {
@@ -146,35 +173,13 @@ input[type='range']::-moz-range-thumb {
   }
 }
 
-// input[type='range']::-webkit-slider-thumb {
-//   height: 24px;
-//   width: 24px;
-//   border-radius: 50%;
-//   background: $color-medium-purple;
-//   pointer-events: auto;
-//   -webkit-appearance: none;
-//   box-shadow: 0 0 6px rgba(0,0,0,0.05);
-//   cursor: pointer;
-// }
-
-// input[type='range']::-moz-range-thumb {
-//   height: 24px;
-//   width: 24px;
-//   border: 1px solid $color-medium-purple;
-//   border-radius: 50%;
-//   background: $color-default-white;
-//   pointer-events: auto;
-//   -moz-appearance: none;
-//   box-shadow: 0 0 6px rgba(0,0,0,0.05);
-//   cursor: pointer;
-// }
-
 /* Buttons */
 
 .main-filters__list {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  margin: 23px 0 15px
 }
 
 .main-filters__input {
@@ -257,9 +262,15 @@ input[type='range']::-moz-range-thumb {
 
 .main-filters__buttons {
   display: grid;
-  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  grid-template-columns: repeat(2, 150px);
   gap: 18px;
-  margin: 20px 0;
+  margin: -3px 0;
+
+  
+  @media (max-width: ($vp-1440 - 1)) {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
 
   button {
     padding: 10px 3px;
