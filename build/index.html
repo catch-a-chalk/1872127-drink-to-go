@@ -11,38 +11,37 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <div class="header__wrapper">
-          <h1 class="visually-hidden">Drink2Go — это интернет-магазин по продаже кофейных напитков. Удобная сортировка по странам произрастания зерна и концентрации молока поможет выбрать идеальный напиток. Количество позиций для заказа не ограничено.</h1>
-          <div class="header__logotype"><a href="#">
-              <svg width="170" height="37" role="img" aria-labelledby="logo-header-label" aria-description="Drink 2 Go">
-                <title id="logo-header-label">Drink2Go</title>
-                <use class="for-mobile" href="img/sprite_auto.svg#logotype-mobile"></use>
-                <use class="for-tablet" href="img/sprite_auto.svg#logotype-tablet"></use>
-                <use class="for-desktop" href="img/sprite_auto.svg#logotype-desktop"></use>
-              </svg></a>
-            <p>Интернет-магазин <br>кофейных напитков</p>
-          </div>
-          <nav class="header__main"><a class="header__submenu" href="#">
-              <p>Главная</p></a><a class="header__submenu" href="#">
-              <p>Каталог</p></a><a class="header__submenu" href="#">
-              <p>Доставка</p></a><a class="header__submenu" href="#">
-              <p>О нас</p></a>
-          </nav>
-          <div class="header__user">
-            <button class="header__subuser">
-              <svg width="18" height="18" aria-hidden="true">
-                <use href="img/sprite_auto.svg#icon-login"></use>
-              </svg>
-              <p>Войти</p>
-            </button>
-            <button class="header__subuser">
-              <svg width="18" height="18" aria-hidden="true">
-                <use href="img/sprite_auto.svg#icon-cart"></use>
-              </svg>
-              <p>Корзина</p>
-            </button>
-          </div>
+      <div class="header__wrapper">
+        <h1 class="visually-hidden">Drink2Go — это интернет-магазин по продаже кофейных напитков. Удобная сортировка по странам произрастания зерна и концентрации молока поможет выбрать идеальный напиток. Количество позиций для заказа не ограничено.</h1>
+        <div class="header__logotype"><a href="#">
+            <svg width="170" height="37" role="img" aria-labelledby="logo-header-label" aria-description="Drink 2 Go">
+              <title id="logo-header-label">Drink2Go</title>
+              <use class="for-mobile" href="img/sprite_auto.svg#logotype-mobile"></use>
+              <use class="for-tablet" href="img/sprite_auto.svg#logotype-tablet"></use>
+              <use class="for-desktop" href="img/sprite_auto.svg#logotype-desktop"></use>
+            </svg></a>
+          <p>Интернет-магазин <br>кофейных напитков</p>
+        </div>
+        <nav class="header__main header__main--closed header__main--nojs">
+          <button class="for-mobile" type="button"></button><a class="header__submenu" href="#">
+            <p>Главная</p></a><a class="header__submenu" href="#">
+            <p>Каталог</p></a><a class="header__submenu" href="#">
+            <p>Доставка</p></a><a class="header__submenu" href="#">
+            <p>О нас</p></a>
+        </nav>
+        <div class="header__user">
+          <button class="header__subuser" type="button">
+            <svg width="18" height="18" aria-hidden="true" dominant-baseline="central">
+              <use href="img/sprite_auto.svg#icon-login"></use>
+            </svg>
+            <p>Войти</p>
+          </button>
+          <button class="header__subuser" type="button">
+            <svg width="18" height="18" aria-hidden="true" dominant-baseline="central">
+              <use href="img/sprite_auto.svg#icon-cart"></use>
+            </svg>
+            <p>Корзина</p>
+          </button>
         </div>
       </div>
     </header>
@@ -412,8 +411,10 @@
             <div class="footer__contacts">
               <h3>Контакты</h3>
               <ul>
-                <li><span></span><a href="https://yandex.ru/maps/2/saint-petersburg/?from=api-maps&amp;ll=30.316766%2C59.968164&amp;mode=routes&amp;origin=jsapi_2_1_79&amp;rtext=~59.968137%2C30.316272&amp;rtt=auto&amp;ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQwNzQ2MxJe0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0L3QsNCx0LXRgNC10LbQvdCw0Y8g0YDQtdC60Lgg0JrQsNGA0L%2FQvtCy0LrQuCwgNSIKDbiH8kEVYN9vQg%3D%3D&amp;z=17">Санкт-Петербург, набережная реки Карповки, дом 5</a></li>
-                <li><span></span><a href="+79999999999">+7 (999) 999-99-99</a></li>
+                <li><span class="footer__address"></span><a href="https://yandex.ru/maps/2/saint-petersburg/?from=api-maps&amp;ll=30.316766%2C59.968164&amp;mode=routes&amp;origin=jsapi_2_1_79&amp;rtext=~59.968137%2C30.316272&amp;rtt=auto&amp;ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQwNzQ2MxJe0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0L3QsNCx0LXRgNC10LbQvdCw0Y8g0YDQtdC60Lgg0JrQsNGA0L%2FQvtCy0LrQuCwgNSIKDbiH8kEVYN9vQg%3D%3D&amp;z=17">
+                    <p>Санкт-Петербург, набережная реки Карповки, дом 5</p></a></li>
+                <li><span class="footer__number"></span><a href="+79999999999">
+                    <p>+7 999 999-99-99</p></a></li>
               </ul>
             </div>
           </div>

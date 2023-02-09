@@ -1,7 +1,6 @@
 - const COMS = [{ social: 'vk', value:'20' },  { social: 'pinterest', value:'22'},  { social: 'ok', value:'20'},]
 - const INNERS = [{ name: 'Каталог'}, { name: 'Доставка'}, { name: 'Способы оплаты'}, { name: 'О нас'},]
 - const OUTERS = [{ name: 'Блог'}, { name: 'Информация для СМИ'}, { name: 'Правовая информация'},]
-- const CONTACTS = [{ href: 'https://yandex.ru/maps/2/saint-petersburg/?from=api-maps&ll=30.316766%2C59.968164&mode=routes&origin=jsapi_2_1_79&rtext=~59.968137%2C30.316272&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQwNzQ2MxJe0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0L3QsNCx0LXRgNC10LbQvdCw0Y8g0YDQtdC60Lgg0JrQsNGA0L%2FQvtCy0LrQuCwgNSIKDbiH8kEVYN9vQg%3D%3D&z=17', text:'Санкт-Петербург, набережная реки Карповки, дом 5'}, { href: '+79999999999', text:'+7 (999) 999-99-99'},]
 
 footer.container
   .footer
@@ -36,10 +35,14 @@ footer.container
         .footer__contacts
           h3 Контакты
           ul
-            each contact in CONTACTS
-              li
-                span
-                a(href=contact.href)=contact.text
+            li
+              span.footer__address
+              a(href="https://yandex.ru/maps/2/saint-petersburg/?from=api-maps&ll=30.316766%2C59.968164&mode=routes&origin=jsapi_2_1_79&rtext=~59.968137%2C30.316272&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQwNzQ2MxJe0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0L3QsNCx0LXRgNC10LbQvdCw0Y8g0YDQtdC60Lgg0JrQsNGA0L%2FQvtCy0LrQuCwgNSIKDbiH8kEVYN9vQg%3D%3D&z=17")
+                p Санкт-Петербург, набережная реки Карповки, дом 5
+            li
+              span.footer__number
+              a(href="+79999999999")
+                p +7 999 999-99-99
       ._made-by
         a(href="https://htmlacademy.ru/profession/frontender")
           |Разработано в&nbsp;

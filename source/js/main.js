@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import initMap from './modules/init-map';
 import mySwiper from './modules/init-swiper';
 import initPrice from './modules/init-price';
+import initToggle from './modules/init-toggle';
 
 // ---------------------------------
 
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initMap();
   mySwiper();
   initPrice();
+  initToggle();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

@@ -1,7 +1,20 @@
+.header {
+  width: 100%;
+  max-width: 1920px;;
+}
+
 .header__wrapper {
+  @media(min-width: ($vp-1440)) {
+    padding: 0 40px;
+  }
+
   display: flex;
   justify-content: space-between;
   gap: 20px;
+
+  @media (max-width: ($vp-768 - 1)) {
+    position: relative;
+  }
 }
 
 .header__logotype {
@@ -13,7 +26,8 @@
   a {
     height: min-content;
     cursor: default;
-    margin-top: 8px;
+    display: flex;
+    align-self: center;
   }
 
   p {
@@ -29,6 +43,16 @@
 
     svg {
       width: 86px;
+    }
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    grid-template-columns: 1fr;
+    margin-left: 20px;
+
+    svg {
+      width: 32px;
+      height: 38px;
     }
   }
 }
@@ -47,10 +71,102 @@
   }
 }
 
+.header__main {
+  @media (max-width: ($vp-768 - 1)) {
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    z-index: 10;
+    align-items: end;
+  }
+
+  button {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0;
+  }
+}
+
+.header__main--opened {
+  background-color: $color-default-white;
+
+  button {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 22px;
+      width: 16px;
+      height: 2px;
+      background-color: $color-night-rider;
+    }
+  
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+  
+    &::after {
+      transform: rotate(-45deg);
+    }
+  
+    &:active::before,
+    &:active::after {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .header__submenu {
+    align-self: center;
+  }
+}
+
+.header__main--closed {
+  button::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 22px;
+    width: 16px;
+    height: 2px;
+    background-color: $color-night-rider;
+    box-shadow: 0 6px 0 0 $color-night-rider, 0 12px 0 0 $color-night-rider;
+  }
+
+  button:active::before {
+    background-color: $color-night-rider;
+    box-shadow: 0 6px 0 0 $color-night-rider, 0 12px 0 0 $color-night-rider;
+  }
+
+  .header__submenu {
+    display: none;
+  }
+}
+
+.header__main--nojs button {
+  display: none;
+}
+
+.header__main .header__main--nojs {
+  position: static;
+  min-height: 0;
+}
+
 .header__user {
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (max-width: ($vp-768 - 1)) {
+    position: relative;
+    right: 60px;
+  }
 }
 
 /* Same effects, same behavior */
@@ -96,6 +212,10 @@
 
   p {
     margin: 0;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    padding: 18px 21px;
   }
 }
 
