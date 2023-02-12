@@ -12,11 +12,21 @@
     @media (max-width: ($vp-1440 - 1)) {
       grid-template-columns: repeat(3, 1fr);
     }
+
+    @media (max-width: ($vp-768 - 1)) {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      padding-top: 60px;
+    }
   }
 
   h2 {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
+
+    @media (max-width: ($vp-768 - 1)) {
+      margin-bottom: 20px;
+    }
   }
 
   small {
@@ -35,6 +45,7 @@
   align-self: end;
   padding: 15px 0;
   font-weight: 600;
+  display: flex;
 
   @media (max-width: ($vp-1440 - 1)) {
     grid-row: 4 / 5;
@@ -68,6 +79,10 @@ select {
     grid-template-columns: repeat(2, minmax(349px, 1fr));
     grid-template-rows: repeat(3, 1fr);
   }
+
+  @media (max-width: ($vp-768 - 1)) {
+    grid-template-columns: repeat(1, minmax(280px, 1fr));
+  }
 }
 
 .main-catalogue__item {
@@ -77,6 +92,10 @@ select {
   position: relative;
   top: 0;
   transition: all .1s ease-in;
+
+  @media (max-width: ($vp-768 - 1)) {
+    padding: 40px 20px 20px 20px;
+  }
 
   &:hover {
     z-index: 1;
@@ -151,6 +170,11 @@ select {
     margin-bottom: 45px;
   }
 
+  @media (max-width: ($vp-768 - 1)) {
+    justify-self: center;
+    gap: 20px;
+  }
+
   button {
     border: none;
     cursor: pointer;
@@ -160,6 +184,43 @@ select {
 
 .main-catalogue__button {
   padding: 9px 54px;
+
+  &--prev {
+    span:after {
+      content: 'Назад';
+    }
+  }
+
+  &--next {
+    span:after {
+      content: 'Вперед';
+    }
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 8px;
+
+    &--prev {
+      background-image: url('data:image/svg+xml,%3Csvg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M5.80847 -5.20835e-08L7 1.23899L3.38306 5L7 8.76101L5.80847 10L1 5L5.80847 -5.20835e-08Z" fill="%237859CF"/%3E%3C/svg%3E');
+      background-repeat: no-repeat;
+      background-position: center;
+      span:after {
+        content: '';
+      }
+    }
+  
+    &--next {
+      transform: rotate(180deg);
+      background-image: url('data:image/svg+xml,%3Csvg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M5.80847 -5.20835e-08L7 1.23899L3.38306 5L7 8.76101L5.80847 10L1 5L5.80847 -5.20835e-08Z" fill="%237859CF"/%3E%3C/svg%3E');
+      background-repeat: no-repeat;
+      background-position: center;
+      span:after {
+        content: '';
+      }
+    }
+  }
 }
 
 .main-catalogue__pagination {
@@ -177,5 +238,10 @@ select {
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0;
+
+    @media (max-width: ($vp-768 - 1)) {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 }

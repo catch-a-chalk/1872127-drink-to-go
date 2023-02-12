@@ -2,7 +2,7 @@
 - const INNERS = [{ name: 'Каталог'}, { name: 'Доставка'}, { name: 'Способы оплаты'}, { name: 'О нас'},]
 - const OUTERS = [{ name: 'Блог'}, { name: 'Информация для СМИ'}, { name: 'Правовая информация'},]
 
-footer.container
+footer
   .footer
     ._wrapper
       ._social
@@ -10,8 +10,8 @@ footer.container
           a(href="#")
             svg(width='170' height='36' role="img" aria-labelledby="logo-footer-label" aria-description="Drink 2 Go")
               title#logo-footer-label=projectName
-              use(href='img/sprite_auto.svg#logotype-mobile').for-mobile
-              use(href='img/sprite_auto.svg#logotype-desktop').for-tablet
+              use(href='img/sprite_auto.svg#logotype-tablet').for-mobile
+              use(href='img/sprite_auto.svg#logotype-tablet').for-tablet
               use(href='img/sprite_auto.svg#logotype-desktop').for-desktop
           p Интернет-магазин кофейных напитков
         ul._coms

@@ -66,6 +66,12 @@
   letter-spacing: 0em;
   text-align: center;
   margin: 5px 0 78px;
+
+  @media (max-width: ($vp-768 - 1)) {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+  }
 }
 
 .sml {

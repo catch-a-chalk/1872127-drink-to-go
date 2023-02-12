@@ -22,6 +22,7 @@
   grid-template-columns: auto auto;
   align-items: center;
   gap: 20px;
+  z-index: 11;
 
   a {
     height: min-content;
@@ -96,6 +97,7 @@
   background-color: $color-default-white;
 
   button {
+    position: sticky;
     &::before,
     &::after {
       content: "";
@@ -162,6 +164,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  z-index: 11;
 
   @media (max-width: ($vp-768 - 1)) {
     position: relative;
